@@ -76,7 +76,7 @@
 <div class="wrap">
   <header>
     <h1>네바다 한의사 법률시험 예상문제</h1>
-    <p>Nevada Oriental Medicine Law (Jurisprudence) Exam Prep · NRS 634A / NAC 634A / NRS 629 / NRS 630</p>
+    <p>총 200문제 · Nevada Oriental Medicine Law (Jurisprudence) Exam Prep · NRS 634A / NAC 634A / NRS 629 / NRS 630</p>
   </header>
 
   <div class="disclaimer">
@@ -118,154 +118,215 @@
    answer: 정답 인덱스(0=A,1=B,2=C,3=D)
    =========================================================== */
 const QUESTIONS = [
-  // ---------- NRS 634A ----------
-  {ch:"NRS 634A", q:"Which board licenses and regulates doctors of Oriental medicine in Nevada?",
-   ko:"네바다에서 한의사(동양의학 의사)를 면허·규제하는 위원회는?",
-   opts:[["State Board of Oriental Medicine","동양의학 위원회"],["State Board of Medical Examiners","주 의료 심사위원회"],["State Board of Health","주 보건 위원회"],["Board of Chiropractic","카이로프랙틱 위원회"]],
-   answer:0, src:"NRS 634A.030 — 동양의학 위원회(State Board of Oriental Medicine) 설치."},
+  // ================= NRS 634A (1-66) =================
+  {ch:"NRS 634A", q:"Which board licenses and regulates doctors of Oriental medicine in Nevada?", ko:"네바다에서 한의사를 면허·규제하는 위원회는?", opts:[["State Board of Oriental Medicine","동양의학 위원회"],["State Board of Medical Examiners","주 의료 심사위원회"],["State Board of Health","주 보건 위원회"],["Board of Chiropractic","카이로프랙틱 위원회"]], answer:0, src:"NRS 634A.030 — 동양의학 위원회 설치."},
+  {ch:"NRS 634A", q:"NRS 634A declares the practice of Oriental medicine to be:", ko:"NRS 634A는 동양의학 실습을 무엇으로 선언하는가?", opts:[["A learned profession affecting public safety and welfare","공공 안전·복지에 영향을 주는 전문직"],["An unregulated trade","규제받지 않는 업종"],["A hobby","취미"],["A form of religion","종교의 일종"]], answer:0, src:"NRS 634A.010 — 공공 안전·복지에 영향을 주는 전문직으로 선언."},
+  {ch:"NRS 634A", q:"Under NRS 634A.020, 'acupuncture' is defined as:", ko:"NRS 634A.020상 '침술'의 정의는?", opts:[["Insertion of needles into the body by piercing the skin","피부를 뚫어 신체에 침을 삽입하는 것"],["Massage of pressure points","지압점 마사지"],["Herbal prescription","한약 처방"],["Application of heat only","온열 요법만"]], answer:0, src:"NRS 634A.020 — 피부를 뚫어 침을 삽입해 기 흐름을 조절."},
+  {ch:"NRS 634A", q:"Under NRS 634A.020, 'dry needling' is limited to the treatment of:", ko:"NRS 634A.020상 '드라이 니들링'은 무엇의 치료에 한정되는가?", opts:[["Myofascial pain","근막통증"],["Internal organ disease","내장 질환"],["Infertility","불임"],["Allergies","알레르기"]], answer:0, src:"NRS 634A.020 — 근막통증 치료에 한정, 일회용 멸균침, 이침(auricular)·전기자극 등 제외."},
+  {ch:"NRS 634A", q:"Under NRS 634A.020, 'Oriental medicine' includes all EXCEPT:", ko:"NRS 634A.020상 '동양의학'에 포함되지 않는 것은?", opts:[["Surgery","수술"],["Acupuncture","침술"],["Herbal medicine","한약"],["Moxibustion","뜸"]], answer:0, src:"NRS 634A.020 — 침술·한약·뜸·드라이니들링 등 포함, 수술은 미포함."},
+  {ch:"NRS 634A", q:"Under NRS 634A.025, the chapter does NOT apply to:", ko:"NRS 634A.025상 본 장이 적용되지 않는 대상은?", opts:[["Physicians licensed under NRS 630 or 633","NRS 630/633 면허 의사"],["All acupuncturists","모든 침구사"],["Herbalists","한약사"],["Students","학생"]], answer:0, src:"NRS 634A.025 — NRS 630/633 면허 의사 등에는 적용 제외."},
+  {ch:"NRS 634A", q:"Which is NOT prohibited by NRS 634A.025?", ko:"NRS 634A.025가 금지하지 않는 것은?", opts:[["Emergency gratuitous (free) services","응급 무상 서비스"],["Unlicensed needle insertion for pay","무면허 유료 침 시술"],["Selling herbs without a license","무면허 한약 판매"],["Advertising as a doctor","의사로 광고"]], answer:0, src:"NRS 634A.025 — 응급 무상 서비스, 가정 내 가족 요법 등은 금지 대상 아님."},
+  {ch:"NRS 634A", q:"How many members constitute the State Board of Oriental Medicine?", ko:"동양의학 위원회는 몇 명으로 구성되는가?", opts:[["Five","5명"],["Seven","7명"],["Nine","9명"],["Eleven","11명"]], answer:1, src:"NRS 634A.030 — 7명."},
+  {ch:"NRS 634A", q:"Who appoints the members of the Board?", ko:"위원회 구성원은 누가 임명하는가?", opts:[["The Governor","주지사"],["The Legislature","주 의회"],["The Board itself","위원회 자체"],["The NCCAOM","NCCAOM"]], answer:0, src:"NRS 634A.030 — 주지사가 임명."},
+  {ch:"NRS 634A", q:"Board members serve:", ko:"위원회 구성원의 임기는?", opts:[["At the pleasure of the Governor","주지사의 재량에 따라"],["For life","종신"],["For a fixed 10-year term","고정 10년 임기"],["Until age 70","70세까지"]], answer:0, src:"NRS 634A.030 — 주지사의 재량(pleasure)에 따라 재임."},
+  {ch:"NRS 634A", q:"Of the 7 Board members, how many must be licensed doctors of Oriental medicine?", ko:"위원 7명 중 면허 한의사여야 하는 인원은?", opts:[["Two","2명"],["Three","3명"],["Four","4명"],["All seven","7명 전원"]], answer:2, src:"NRS 634A.040 — 4명은 3년 이상 개업한 면허 한의사."},
+  {ch:"NRS 634A", q:"A licensed-OM Board member must have practiced in Nevada for at least:", ko:"면허 한의사 위원은 네바다에서 최소 몇 년 개업해야 하는가?", opts:[["1 year","1년"],["2 years","2년"],["3 years","3년"],["5 years","5년"]], answer:2, src:"NRS 634A.040 — 네바다에서 3년 이상 개업."},
+  {ch:"NRS 634A", q:"The Board must include one member who is:", ko:"위원회에 반드시 포함되는 위원은?", opts:[["A licensed physician (under NRS 630)","NRS 630 면허 의사"],["A pharmacist","약사"],["A hospital CEO","병원 CEO"],["An insurance agent","보험 대리인"]], answer:0, src:"NRS 634A.040 — NRS 630 면허 의사 1명 포함."},
+  {ch:"NRS 634A", q:"The Board also includes one member who:", ko:"위원회에 포함되는 또 다른 위원은?", opts:[["Represents a school or college of Oriental medicine","동양의학 학교/대학을 대표"],["Represents an insurance company","보험사를 대표"],["Is a pharmacist","약사"],["Is a chiropractor","카이로프랙터"]], answer:0, src:"NRS 634A.040 — 동양의학 학교/대학 대표 1명."},
+  {ch:"NRS 634A", q:"Board members may receive compensation of not more than:", ko:"위원회 구성원이 받을 수 있는 보수의 상한은?", opts:[["$80 per day","일 $80"],["$150 per day","일 $150"],["$300 per day","일 $300"],["No compensation","없음"]], answer:1, src:"NRS 634A.050 — 위원회 업무 수행 시 일 최대 $150."},
+  {ch:"NRS 634A", q:"How often does the Board elect its officers (President, VP, Secretary-Treasurer)?", ko:"위원회는 임원(회장·부회장·총무)을 얼마나 자주 선출하는가?", opts:[["Annually","매년"],["Every 2 years","2년마다"],["Every 5 years","5년마다"],["Once only","최초 1회"]], answer:0, src:"NRS 634A.060 — 매년 임원 선출."},
+  {ch:"NRS 634A", q:"Under NRS 634A.070, the Board may compel testimony by:", ko:"NRS 634A.070상 위원회가 증언을 강제하는 수단은?", opts:[["Subpoena","소환장(subpoena)"],["Arrest warrant","체포영장"],["Court injunction only","법원 금지명령만"],["It cannot compel testimony","강제 불가"]], answer:0, src:"NRS 634A.070 — 소환장으로 증인 출석·증거 제출 강제."},
+  {ch:"NRS 634A", q:"The Board must hold meetings at least:", ko:"위원회는 최소 얼마나 자주 회의를 하는가?", opts:[["Once a year","연 1회"],["Once a month","월 1회"],["Twice a week","주 2회"],["Every quarter","분기마다"]], answer:0, src:"NRS 634A.080 — 연 1회 이상, 회장/과반수 요청 시 추가."},
+  {ch:"NRS 634A", q:"The Board's fiscal year runs from:", ko:"위원회의 회계연도 기간은?", opts:[["July 1 to June 30","7월 1일 ~ 6월 30일"],["January 1 to December 31","1월 1일 ~ 12월 31일"],["October 1 to September 30","10월 1일 ~ 9월 30일"],["April 1 to March 31","4월 1일 ~ 3월 31일"]], answer:0, src:"NRS 634A.080 — 회계연도 7/1~6/30."},
+  {ch:"NRS 634A", q:"Under NRS 634A.083, who may enter a licensee's premises to inspect for violations?", ko:"NRS 634A.083상 위반 점검을 위해 면허자의 시설에 출입할 수 있는 자는?", opts:[["Any Board member or agent","위원회 구성원 또는 대리인"],["Only the police","경찰만"],["Only the patient","환자만"],["No one","아무도 불가"]], answer:0, src:"NRS 634A.083 — 위원/대리인이 점검 위해 출입 가능."},
+  {ch:"NRS 634A", q:"How long must the Board retain complaints?", ko:"위원회는 불만(complaint)을 얼마나 오래 보관해야 하는가?", opts:[["3 years","3년"],["5 years","5년"],["At least 10 years","최소 10년"],["Indefinitely","무기한"]], answer:2, src:"NRS 634A.085 — 최소 10년 보관."},
+  {ch:"NRS 634A", q:"Under NRS 634A.085, a complaint to the Board:", ko:"NRS 634A.085상 위원회에 대한 불만은?", opts:[["May be anonymous","익명도 가능"],["Must always name the complainant","항상 실명이어야 함"],["Must be filed by a patient only","환자만 제기 가능"],["Must be notarized","공증 필수"]], answer:0, src:"NRS 634A.085 — 익명 가능(단, 공정 처리 불가 시 위원회가 기각 가능)."},
+  {ch:"NRS 634A", q:"To establish a school of Oriental medicine in Nevada, it must be:", ko:"네바다에서 동양의학 학교를 설립하려면?", opts:[["Approved by the Board and accredited (or in candidacy) by ACAOM","위원회 승인 + ACAOM 인증(또는 후보 지위)"],["Approved by the Governor only","주지사 승인만"],["Licensed by the FDA","FDA 인가"],["Self-certified","자체 인증"]], answer:0, src:"NRS 634A.090 — 위원회 승인 + ACAOM 인증/후보 + 주(州) 고등교육위 인가."},
+  {ch:"NRS 634A", q:"Under NRS 634A.110, an applicant must prove an age of at least:", ko:"NRS 634A.110상 신청자가 증명해야 하는 최소 연령은?", opts:[["18","18세"],["21","21세"],["25","25세"],["No minimum","제한 없음"]], answer:1, src:"NRS 634A.110 — 21세 이상 + 적절한 교육 증명."},
+  {ch:"NRS 634A", q:"With the application, an applicant must submit:", ko:"신청서와 함께 제출해야 하는 것은?", opts:[["A complete set of fingerprints","완전한 지문 세트"],["Two patient testimonials","환자 추천서 2부"],["Proof of Nevada residency","네바다 거주 증명"],["A cash bond","현금 보증금"]], answer:0, src:"NRS 634A.110 — 지문(연방 CRN·FBI로 송부), 수수료 등."},
+  {ch:"NRS 634A", q:"The application fee under NRS 634A.110 is not more than:", ko:"NRS 634A.110상 신청 수수료 상한은?", opts:[["$250","$250"],["$500","$500"],["$1,000","$1,000"],["$2,500","$2,500"]], answer:2, src:"NRS 634A.110 — 최대 $1,000."},
+  {ch:"NRS 634A", q:"To be licensed, an applicant must pass which examination(s)?", ko:"면허 취득을 위해 합격해야 하는 시험은?", opts:[["Only a Nevada written test","네바다 필기만"],["Only the NCCAOM national exam","NCCAOM만"],["Both the NCCAOM national exam AND a Nevada law exam","NCCAOM + 네바다 법규시험 둘 다"],["A practical exam only","실기만"]], answer:2, src:"NRS 634A.120 — 국가시험 + 주 법규시험 둘 다."},
+  {ch:"NRS 634A", q:"The national certification organization referenced is:", ko:"참조되는 국가 인증 기관은?", opts:[["NCCAOM","NCCAOM"],["AMA","AMA"],["WHO","WHO"],["FDA","FDA"]], answer:0, src:"NRS 634A.120 — NCCAOM."},
+  {ch:"NRS 634A", q:"The Board must offer the state examination at least:", ko:"위원회는 주(州) 시험을 최소 얼마나 자주 시행해야 하는가?", opts:[["Once a year","연 1회"],["Twice a year","연 2회"],["Four times a year","연 4회"],["On demand only","요청 시에만"]], answer:1, src:"NRS 634A.120 — 연 2회 이상."},
+  {ch:"NRS 634A", q:"An applicant who fails the state examination:", ko:"주 시험에 불합격한 신청자는?", opts:[["May retake it","재응시 가능"],["Is permanently barred","영구 응시 불가"],["Must wait 5 years","5년 대기"],["Must change careers","직업 변경 필요"]], answer:0, src:"NRS 634A.120 — 재응시 가능."},
+  {ch:"NRS 634A", q:"Under NRS 634A.140, a primary-pathway applicant must have completed:", ko:"NRS 634A.140 기본 경로 신청자가 이수해야 하는 것은?", opts:[["A 4-year ACAOM-accredited OM program","4년제 ACAOM 인증 동양의학 프로그램"],["A 1-year online course","1년 온라인 과정"],["A Western medical residency","서양의학 레지던시"],["A pharmacy degree","약학 학위"]], answer:0, src:"NRS 634A.140 — 4년제 ACAOM 인증 프로그램 + 학사학위 등."},
+  {ch:"NRS 634A", q:"Under NRS 634A.140, an applicant must also hold:", ko:"NRS 634A.140상 신청자가 보유해야 하는 것은?", opts:[["Current NCCAOM certification","유효한 NCCAOM 인증"],["A pharmacy license","약사 면허"],["A teaching credential","교원 자격증"],["A business license","사업자 면허"]], answer:0, src:"NRS 634A.140 — 모든 경로에서 유효한 NCCAOM 인증 필요."},
+  {ch:"NRS 634A", q:"The alternative pathway (NRS 634A.140) requires lawful OM practice elsewhere for at least:", ko:"NRS 634A.140 대체 경로는 타지에서 합법적 동양의학 개업을 최소 몇 년 요구하는가?", opts:[["1 year","1년"],["2 years","2년"],["4 years","4년"],["10 years","10년"]], answer:2, src:"NRS 634A.140 — 타 주/국가에서 4년 이상 합법 개업."},
+  {ch:"NRS 634A", q:"For the point-injection therapy endorsement (NRS 634A.142), the practitioner must also carry:", ko:"점주사요법 보증(NRS 634A.142)을 위해 추가로 필요한 것은?", opts:[["Professional liability insurance","전문직 배상책임보험"],["A surgical license","수술 면허"],["A pharmacy permit","약국 허가"],["Nothing extra","추가 불필요"]], answer:0, src:"NRS 634A.142 — 승인 교육 이수 + 전문직 배상책임보험."},
+  {ch:"NRS 634A", q:"The point-injection endorsement requires Board-approved coursework of at least:", ko:"점주사 보증에 필요한 위원회 승인 교육시간은?", opts:[["8 hours","8시간"],["24 hours in-person","대면 24시간"],["100 hours","100시간"],["No coursework","교육 불필요"]], answer:1, src:"NRS 634A.142 — 대면 24시간 + 실습 8시간 + 에피네프린 2시간."},
+  {ch:"NRS 634A", q:"Under NRS 634A.160, every license must be:", ko:"NRS 634A.160상 모든 면허는 어떻게 해야 하는가?", opts:[["Displayed at the place of business","사업장에 게시"],["Mailed to the Board annually","매년 위원회로 우송"],["Kept in a safe deposit box","대여금고 보관"],["Posted online","온라인 게시"]], answer:0, src:"NRS 634A.160 — 사무소·사업장·근무지에 게시."},
+  {ch:"NRS 634A", q:"The athletic-team temporary exemption (NRS 634A.163) is valid for not more than:", ko:"운동팀 임시 면제(NRS 634A.163)의 기본 유효기간은?", opts:[["10 days per competition/training","대회/훈련당 10일"],["30 days","30일"],["6 months","6개월"],["1 year","1년"]], answer:0, src:"NRS 634A.163 — 대회/훈련당 10일(최대 20일 연장), 연 60일 한도."},
+  {ch:"NRS 634A", q:"Under the athletic exemption, the maximum total days per calendar year is:", ko:"운동팀 면제의 연간 최대 일수는?", opts:[["30 days","30일"],["60 days","60일"],["90 days","90일"],["No limit","제한 없음"]], answer:1, src:"NRS 634A.163 — 역년 기준 최대 60일."},
+  {ch:"NRS 634A", q:"By what date must a license be renewed each year?", ko:"면허는 매년 언제까지 갱신해야 하는가?", opts:[["On or before February 1","2월 1일 이전"],["December 31","12월 31일"],["The licensee's birthday","면허자 생일"],["July 1","7월 1일"]], answer:0, src:"NRS 634A.167 — 매년 2월 1일까지."},
+  {ch:"NRS 634A", q:"If renewal is not completed by February 1, the license:", ko:"2월 1일까지 갱신하지 않으면 면허는?", opts:[["Expires automatically","자동 만료"],["Is downgraded","등급 강등"],["Continues for 1 year","1년 연장"],["Is revoked permanently","영구 취소"]], answer:0, src:"NRS 634A.167 — 자동 만료, 90일 내 복원 가능."},
+  {ch:"NRS 634A", q:"An automatically expired license may be reinstated within:", ko:"자동 만료된 면허는 며칠 이내 복원 가능한가?", opts:[["30 days","30일"],["60 days","60일"],["90 days","90일"],["1 year","1년"]], answer:2, src:"NRS 634A.167 / NAC 634A.150 — 만료 후 90일 이내."},
+  {ch:"NRS 634A", q:"Continuing education is required for:", ko:"보수교육이 요구되는 경우는?", opts:[["License renewal/reinstatement","면허 갱신/복원"],["Initial licensure only","최초 면허만"],["Board membership","위원회 가입"],["Nothing","해당 없음"]], answer:0, src:"NRS 634A.167 — 갱신/복원의 전제조건으로 보수교육 요구."},
+  {ch:"NRS 634A", q:"Which is a ground for disciplinary action under NRS 634A.170?", ko:"NRS 634A.170상 징계 사유에 해당하는 것은?", opts:[["Conviction of a felony related to the practice","개업 관련 중죄 유죄판결"],["Charging low fees","저렴한 요금"],["Advertising online","온라인 광고"],["Treating few patients","적은 환자 수"]], answer:0, src:"NRS 634A.170 — 개업 관련 중죄·부정 취득·중대 과실 등."},
+  {ch:"NRS 634A", q:"Which is a ground for discipline under NRS 634A.170?", ko:"NRS 634A.170상 징계 사유는?", opts:[["Obtaining a license by fraud","사기로 면허 취득"],["Using social media","소셜 미디어 사용"],["Hiring an assistant","조수 고용"],["Renting an office","사무실 임대"]], answer:0, src:"NRS 634A.170 — 사기·허위진술로 면허 취득은 징계 사유."},
+  {ch:"NRS 634A", q:"Which is a ground for discipline under NRS 634A.170?", ko:"NRS 634A.170상 징계 사유는?", opts:[["Gross or repeated malpractice","중대하거나 반복된 의료과실"],["A single billing error","단순 청구 오류 1건"],["Working part-time","시간제 근무"],["Joining an association","협회 가입"]], answer:0, src:"NRS 634A.170 — 중대/반복 의료과실(합의된 청구 포함)."},
+  {ch:"NRS 634A", q:"Which is a ground for discipline under NRS 634A.170?", ko:"NRS 634A.170상 징계 사유는?", opts:[["False or deceptive advertising","허위·기만 광고"],["Honest advertising","정직한 광고"],["Offering discounts","할인 제공"],["Free consultations","무료 상담"]], answer:0, src:"NRS 634A.170 — 고의의 허위·기만 광고."},
+  {ch:"NRS 634A", q:"Habitual drunkenness or controlled substance addiction is:", ko:"상습 음주 또는 마약 중독은?", opts:[["A ground for discipline","징계 사유"],["Not relevant","무관"],["Encouraged","권장됨"],["A renewal requirement","갱신 요건"]], answer:0, src:"NRS 634A.170 — 상습 음주·약물 중독은 징계 사유."},
+  {ch:"NRS 634A", q:"Willful disclosure of a privileged patient communication is:", ko:"환자의 비밀특권 의사소통을 고의로 누설하는 것은?", opts:[["A ground for discipline","징계 사유"],["Always allowed","항상 허용"],["Required by law","법적 의무"],["A renewal step","갱신 절차"]], answer:0, src:"NRS 634A.170 — 비밀특권 정보의 고의 누설은 징계 사유."},
+  {ch:"NRS 634A", q:"Performing or advising a liquid silicone injection is:", ko:"액상 실리콘 주입을 시행·권유하는 것은?", opts:[["A ground for discipline","징계 사유"],["Standard practice","표준 진료"],["Encouraged","권장"],["Exempt","면제"]], answer:0, src:"NRS 634A.170 — 액상 실리콘 주입 시행/조력/권유는 징계 사유."},
+  {ch:"NRS 634A", q:"Upon a court order to suspend a license for child support, the Board deems it suspended:", ko:"양육비 미납 면허정지 법원명령 시 위원회는 언제 정지로 간주하는가?", opts:[["At the end of the 30th day","30일째 종료 시"],["Immediately","즉시"],["After 1 year","1년 후"],["After a hearing only","청문 후에만"]], answer:0, src:"NRS 634A.175 — 30일째 종료 시 정지(이행 확인서 미수령 시)."},
+  {ch:"NRS 634A", q:"After receiving an industrial-insurance violation report, the Board must begin proceedings within:", ko:"산재보험 위반 보고 수령 후 위원회는 며칠 이내 징계 절차를 개시해야 하는가?", opts:[["30 days","30일"],["60 days","60일"],["90 days","90일"],["6 months","6개월"]], answer:0, src:"NRS 634A.180 — 30일 이내 절차 개시."},
+  {ch:"NRS 634A", q:"Under NRS 634A.185, complaints and investigation documents are generally:", ko:"NRS 634A.185상 불만 및 조사 문서는 일반적으로?", opts:[["Confidential (until charging)","기밀(기소 전까지)"],["Always public","항상 공개"],["Destroyed immediately","즉시 폐기"],["Sold to insurers","보험사에 판매"]], answer:0, src:"NRS 634A.185 — 기밀, 단 기소장·징계명령은 공개기록."},
+  {ch:"NRS 634A", q:"Under NRS 634A.190, a licensed doctor of Oriental medicine is:", ko:"NRS 634A.190상 면허 한의사는?", opts:[["Not subject to NRS 630 (physicians)","NRS 630(의사)의 적용을 받지 않음"],["Also licensed as an MD","MD로도 면허"],["Regulated by the pharmacy board","약무위원회 규제"],["Exempt from all law","모든 법 면제"]], answer:0, src:"NRS 634A.190 — 면허자는 NRS 630의 적용 대상 아님."},
+  {ch:"NRS 634A", q:"Under NRS 634A.190, a licensee may refer to themselves as:", ko:"NRS 634A.190상 면허자가 사용할 수 있는 호칭은?", opts:[["Physician of Oriental medicine","동양의학 의사(physician of Oriental medicine)"],["Medical doctor (MD)","의학박사(MD)"],["Surgeon","외과의"],["Dentist","치과의사"]], answer:0, src:"NRS 634A.190 — 'physician of Oriental medicine' 사용 가능."},
+  {ch:"NRS 634A", q:"Under NRS 634A.210, doctors of Oriental medicine must observe:", ko:"NRS 634A.210상 한의사가 준수해야 하는 것은?", opts:[["Birth/death/public-health reporting rules","출생·사망·공중보건 보고 규정"],["Federal tax audits","연방 세무감사"],["Stock market rules","증시 규정"],["Zoning codes only","건축용도 규정만"]], answer:0, src:"NRS 634A.210 — 주·시의 출생/사망/공중보건 보고 규정 준수."},
+  {ch:"NRS 634A", q:"Conducting an unauthorized Oriental medicine seminar (NRS 634A.225) is a:", ko:"무허가 동양의학 세미나 개최(NRS 634A.225)는?", opts:[["Misdemeanor","경범죄(misdemeanor)"],["Felony","중죄"],["Civil-only matter","민사 사안"],["Lawful act","합법 행위"]], answer:0, src:"NRS 634A.225 — 위원회 규정 외 세미나 개최는 경범죄."},
+  {ch:"NRS 634A", q:"Under NRS 634A.228, substantiated unlicensed-practice information is:", ko:"NRS 634A.228상 입증된 무면허 개업 정보는?", opts:[["Forwarded to law enforcement","법 집행기관으로 이송"],["Kept secret forever","영구 비밀"],["Published in newspapers","신문 게재"],["Ignored","무시"]], answer:0, src:"NRS 634A.228 — 특별 사정 없는 한 법 집행기관에 이송."},
+  {ch:"NRS 634A", q:"Practicing Oriental medicine without a valid license is a:", ko:"유효 면허 없이 동양의학을 개업하는 것은?", opts:[["Gross misdemeanor","중경범죄(gross misdemeanor)"],["Petty offense","경미한 위반"],["Civil fine only","민사 벌금만"],["Lawful act","합법"]], answer:0, src:"NRS 634A.230 — 무면허 개업/사칭은 중경범죄(더 무거운 벌이 없는 한)."},
+  {ch:"NRS 634A", q:"Under NRS 634A.230, a person issued a citation may appeal within:", ko:"NRS 634A.230상 시정명령(citation)을 받은 자는 며칠 이내 이의신청할 수 있는가?", opts:[["10 days","10일"],["20 days","20일"],["30 days","30일"],["90 days","90일"]], answer:2, src:"NRS 634A.230 — 시정명령에 대해 30일 이내 이의신청."},
+  {ch:"NRS 634A", q:"Under NRS 634A.240, the Board may obtain an injunction:", ko:"NRS 634A.240상 위원회는 금지명령을 받을 때?", opts:[["Without proof of actual damages","실제 손해 입증 없이도"],["Only after criminal conviction","형사 유죄 후에만"],["Only with patient consent","환자 동의 시에만"],["Never","불가"]], answer:0, src:"NRS 634A.240 — 실손해 입증 없이 금지명령 가능(형사처벌 별개)."},
+  {ch:"NRS 634A", q:"The maximum administrative fine under NRS 634A.250 is:", ko:"NRS 634A.250상 행정 벌금 상한은?", opts:[["$500","$500"],["$1,000","$1,000"],["$2,500","$2,500"],["$10,000","$10,000"]], answer:2, src:"NRS 634A.250 — 통지·청문 후 위반당 최대 $2,500."},
+  {ch:"NRS 634A", q:"Assisting a licensed practitioner is allowed under NRS 634A.025 EXCEPT for:", ko:"NRS 634A.025상 면허자 보조가 허용되지만 예외인 행위는?", opts:[["Needle insertion or herbal prescription","침 삽입 또는 한약 처방"],["Cleaning the office","사무실 청소"],["Scheduling appointments","예약 관리"],["Greeting patients","환자 응대"]], answer:0, src:"NRS 634A.025 — 보조는 가능하나 침 삽입·한약 처방은 제외."},
+  {ch:"NRS 634A", q:"Under NRS 634A.020, 'herbal medicine' means:", ko:"NRS 634A.020상 '한약(herbal medicine)'의 의미는?", opts:[["Suggesting/prescribing herbs to cure or relieve ailments","질병 치료·완화를 위해 약초를 권유·처방"],["Performing surgery","수술 수행"],["Injecting drugs","약물 주사"],["X-ray imaging","엑스레이 촬영"]], answer:0, src:"NRS 634A.020 — 질병 치료/완화 목적의 약초 권유·처방·지시."},
+  {ch:"NRS 634A", q:"Under NRS 634A.070, the Board may adopt regulations that include:", ko:"NRS 634A.070상 위원회가 채택할 수 있는 규정에 포함되는 것은?", opts:[["A code of ethics","윤리강령"],["Federal tax rates","연방 세율"],["Criminal sentencing","형사 양형"],["Zoning laws","용도지역법"]], answer:0, src:"NRS 634A.070 — 윤리강령 등 규정 채택 권한."},
 
-  {ch:"NRS 634A", q:"How many members constitute the State Board of Oriental Medicine?",
-   ko:"동양의학 위원회는 몇 명으로 구성되는가?",
-   opts:[["Five","5명"],["Seven","7명"],["Nine","9명"],["Eleven","11명"]],
-   answer:1, src:"NRS 634A.030 — 주지사가 임명하는 7명."},
+  // ================= NAC 634A (67-136) =================
+  {ch:"NAC 634A", q:"Under NAC 634A.007, 'licensee' means:", ko:"NAC 634A.007상 'licensee(면허자)'의 의미는?", opts:[["A doctor of Oriental medicine","한의사"],["A pharmacist","약사"],["A board member","위원"],["A student","학생"]], answer:0, src:"NAC 634A.007 — 면허자 = 한의사."},
+  {ch:"NAC 634A", q:"An application must be filed at least how long before the desired state exam date?", ko:"신청서는 희망 주(州) 시험일 최소 며칠/개월 전에 제출해야 하는가?", opts:[["1 month","1개월"],["3 months","3개월"],["6 months","6개월"],["1 year","1년"]], answer:1, src:"NAC 634A.071 — 시험일 3개월 이상 전 제출."},
+  {ch:"NAC 634A", q:"The application must be completed in:", ko:"신청서 작성 언어는?", opts:[["English","영어"],["Korean","한국어"],["Chinese","중국어"],["Any language","아무 언어"]], answer:0, src:"NAC 634A.071 — 영어로 타이핑/작성."},
+  {ch:"NAC 634A", q:"The Board may reject an application if it is not completed within:", ko:"신청이 며칠/개월 내 완료되지 않으면 위원회가 거부할 수 있는가?", opts:[["3 months","3개월"],["6 months","6개월"],["1 year","1년"],["2 years","2년"]], answer:1, src:"NAC 634A.075 — 6개월 내 미완료 시 거부 가능."},
+  {ch:"NAC 634A", q:"The Board MUST reject an application if:", ko:"위원회가 반드시 신청을 거부해야 하는 경우는?", opts:[["The fee check is returned for insufficient funds","수수료 수표가 잔액부족으로 반환"],["The applicant is over 40","신청자가 40세 초과"],["The applicant lives out of state","주 외 거주"],["The applicant has tattoos","문신이 있음"]], answer:0, src:"NAC 634A.075 — 부도수표(NSF) 시 반드시 거부."},
+  {ch:"NAC 634A", q:"For graduates after Nov 25, 2002, the program must have at least:", ko:"2002.11.25 이후 졸업자 프로그램의 최소 교육시간은?", opts:[["1,000 hours","1,000시간"],["2,000 hours","2,000시간"],["3,000 hours total (≥2,500 didactic)","총 3,000시간(이론 2,500시간 이상)"],["5,000 hours","5,000시간"]], answer:2, src:"NAC 634A.080 — 총 3,000시간 이상(이론 2,500시간 이상) 또는 학사+석사."},
+  {ch:"NAC 634A", q:"For graduates before Nov 25, 2002, the minimum total hours is:", ko:"2002.11.25 이전 졸업자의 최소 총 교육시간은?", opts:[["2,800 hours","2,800시간"],["3,000 hours","3,000시간"],["1,500 hours","1,500시간"],["4,000 hours","4,000시간"]], answer:0, src:"NAC 634A.080 — 2002.11.25 이전: 총 2,800시간 이상(이론 2,500 이상)."},
+  {ch:"NAC 634A", q:"A Board-approved curriculum must include all EXCEPT:", ko:"위원회 승인 교과과정에 포함되지 않는 것은?", opts:[["Veterinary surgery","수의외과"],["Acupuncture and moxibustion","침술과 뜸"],["Herbology","본초학"],["Anatomy","해부학"]], answer:0, src:"NAC 634A.080 — 침·뜸·본초·동양 생리/병리/진단·해부·약리 등 포함."},
+  {ch:"NAC 634A", q:"Before taking the state exam, an applicant must:", ko:"주 시험 응시 전 신청자가 충족해야 하는 것은?", opts:[["Complete the background investigation","신원조사 완료"],["Open a clinic","클리닉 개원"],["Pay $5,000","$5,000 납부"],["Get a referral","추천 받기"]], answer:0, src:"NAC 634A.090 — 신원조사(FBI 보고 포함) 완료 전 응시 불가."},
+  {ch:"NAC 634A", q:"Before online implementation, the state exam is given in:", ko:"온라인 시행 전, 주 시험은 언제 시행되었는가?", opts:[["June and December","6월과 12월"],["Only January","1월만"],["Every month","매월"],["Only on weekends","주말만"]], answer:0, src:"NAC 634A.100 — (온라인 전) 6월·12월 또는 위원회 지정일."},
+  {ch:"NAC 634A", q:"The applicant must be notified of the exam date at least:", ko:"시험일은 최소 며칠 전 통지되어야 하는가?", opts:[["10 days before","10일 전"],["20 days before","20일 전"],["30 days before","30일 전"],["No notice","통지 없음"]], answer:1, src:"NAC 634A.100 — 시험일 20일 이상 전 통지."},
+  {ch:"NAC 634A", q:"What is the minimum passing score on the state examination?", ko:"주 시험 최소 합격 점수는?", opts:[["60%","60%"],["70%","70%"],["75%","75%"],["80%","80%"]], answer:1, src:"NAC 634A.100 — 70% 이상."},
+  {ch:"NAC 634A", q:"After online implementation, an eligible applicant must take the exam within:", ko:"온라인 시행 후, 적격 신청자는 며칠 이내 응시해야 하는가?", opts:[["30 days","30일"],["60 days","60일"],["90 days of eligibility notice","적격 통지 후 90일"],["1 year","1년"]], answer:2, src:"NAC 634A.100 — 적격 통지 후 90일 이내 응시."},
+  {ch:"NAC 634A", q:"Under NAC 634A.105, a Board member may NOT grade an applicant who is:", ko:"NAC 634A.105상 위원이 채점할 수 없는 신청자는?", opts:[["Related within the third degree","3촌(3친등) 이내 친족"],["From another state","타 주 출신"],["Over 50","50세 초과"],["A new graduate","신규 졸업자"]], answer:0, src:"NAC 634A.105 — 3친등 이내 혈족/인척, 중대한 금전관계 시 관여 불가."},
+  {ch:"NAC 634A", q:"A failed applicant may retake the exam by paying the:", ko:"불합격자는 무엇을 내고 재응시하는가?", opts:[["Reexamination fee","재시험 수수료"],["Original application fee again","최초 신청비 재납부"],["A $5,000 penalty","$5,000 벌금"],["Nothing","무료"]], answer:0, src:"NAC 634A.110 — 다음 시험일에 재시험 수수료 납부 후 재응시."},
+  {ch:"NAC 634A", q:"Under NAC 634A.116, a license becomes inactive upon:", ko:"NAC 634A.116상 면허가 비활성으로 전환되는 경우는?", opts:[["Loss of lawful U.S. work authorization","미국 합법 취업 자격 상실"],["Moving cities","도시 이전"],["Turning 65","65세 도달"],["Changing clinics","클리닉 변경"]], answer:0, src:"NAC 634A.116 — 미국 내 합법 체류·취업 자격 종료 시 자동 비활성."},
+  {ch:"NAC 634A", q:"Under NAC 634A.130, the pocket license must be:", ko:"NAC 634A.130상 포켓 면허증은?", opts:[["Kept in possession during professional services","진료 중 소지"],["Framed at home","집에 액자로 보관"],["Mailed to patients","환자에게 우송"],["Destroyed yearly","매년 폐기"]], answer:0, src:"NAC 634A.130 — 진료 중 소지, 환자·위원·경관 요청 시 제시."},
+  {ch:"NAC 634A", q:"Licenses first issued after Dec 31, 2018 must maintain:", ko:"2018.12.31 이후 최초 발급 면허가 유지해야 하는 것은?", opts:[["NCCAOM Oriental Medicine certification","NCCAOM 동양의학 인증"],["Malpractice insurance","의료과실 보험"],["A Western medical license","서양의학 면허"],["A business permit","사업 허가"]], answer:0, src:"NAC 634A.133 — NCCAOM 인증 유지 + 변동 시 증빙 제출."},
+  {ch:"NAC 634A", q:"How many hours of continuing education are required each calendar year?", ko:"매 역년 요구되는 보수교육 시간은?", opts:[["5","5시간"],["10","10시간"],["20","20시간"],["40","40시간"]], answer:1, src:"NAC 634A.135 — 매 역년 10시간 이상(비활성 면제)."},
+  {ch:"NAC 634A", q:"The maximum CE hours that may be carried forward is:", ko:"이월 가능한 최대 보수교육 시간은?", opts:[["0","0"],["Up to 10 hours","최대 10시간"],["Up to 20 hours","최대 20시간"],["Unlimited","무제한"]], answer:1, src:"NAC 634A.135 — 초과분 최대 10시간 이월."},
+  {ch:"NAC 634A", q:"Holders of an inactive license are:", ko:"비활성 면허 소지자는?", opts:[["Exempt from CE","보수교육 면제"],["Required to double CE","2배 이수"],["Required to retake the exam","재시험"],["Required to pay $2,000","$2,000 납부"]], answer:0, src:"NAC 634A.135 — 비활성은 보수교육 면제."},
+  {ch:"NAC 634A", q:"A non-exempt approved CE course approval expires after:", ko:"비면제 승인 보수교육 과정의 승인 유효기간은?", opts:[["1 year","1년"],["2 years","2년"],["4 years","4년"],["Never","만료 없음"]], answer:2, src:"NAC 634A.137 — 승인 후 4년 경과 시 만료."},
+  {ch:"NAC 634A", q:"Which CE courses are exempt from Board pre-approval?", ko:"위원회 사전승인이 면제되는 보수교육 과정은?", opts:[["ACAOM core-competency courses approved by NCCAOM","NCCAOM 승인 ACAOM 핵심역량 과정"],["Any online course","아무 온라인 과정"],["Cooking classes","요리 강좌"],["First aid courses","응급처치 과정"]], answer:0, src:"NAC 634A.137 — NCCAOM 재인증용 ACAOM 핵심역량 과정은 승인·수수료 면제."},
+  {ch:"NAC 634A", q:"The first renewal fee is not due until:", ko:"최초 갱신 수수료의 납부 시점은?", opts:[["February 1 of the year following issuance","발급 다음 해 2월 1일"],["Immediately","즉시"],["Never","없음"],["5 years later","5년 후"]], answer:0, src:"NAC 634A.140 — 최초 갱신비는 발급 다음 해 2/1까지 면제."},
+  {ch:"NAC 634A", q:"To reinstate an expired license, an applicant must submit:", ko:"만료 면허 복원 시 제출해야 하는 것은?", opts:[["Renewal fee + late fee + proof of CE","갱신비+연체료+보수교육 증빙"],["A new diploma","새 졸업장"],["A police report","경찰 보고서"],["Two references","추천서 2부"]], answer:0, src:"NAC 634A.150 — 90일 내 갱신비+연체료+보수교육 증빙."},
+  {ch:"NAC 634A", q:"If not reinstated within 90 days of expiration, the person must:", ko:"만료 후 90일 내 미복원 시?", opts:[["Apply for a new license","신규 면허 신청"],["Pay double fees only","수수료 2배만"],["Wait 1 year","1년 대기"],["Do nothing","조치 불필요"]], answer:0, src:"NAC 634A.150 — 90일 경과 시 신규 면허 재신청."},
+  {ch:"NAC 634A", q:"Upon revocation, the licensee must surrender the license within:", ko:"면허 취소 시 면허증 반납 기한은?", opts:[["5 days","5일"],["10 days","10일"],["30 days","30일"],["90 days","90일"]], answer:0, src:"NAC 634A.160 — 취소/정지 통지 후 5일 이내 반납."},
+  {ch:"NAC 634A", q:"What is the original application fee for licensure?", ko:"면허 최초 신청 수수료는?", opts:[["$500","$500"],["$700","$700"],["$1,000","$1,000"],["$2,000","$2,000"]], answer:2, src:"NAC 634A.165 — 최초 신청 $1,000."},
+  {ch:"NAC 634A", q:"What is the active license annual renewal fee?", ko:"활성 면허 연간 갱신 수수료는?", opts:[["$300","$300"],["$500","$500"],["$700","$700"],["$1,000","$1,000"]], answer:2, src:"NAC 634A.165 — 활성 갱신 $700."},
+  {ch:"NAC 634A", q:"What is the inactive license renewal fee?", ko:"비활성 면허 갱신 수수료는?", opts:[["$500","$500"],["$700","$700"],["$100","$100"],["$1,000","$1,000"]], answer:0, src:"NAC 634A.165 — 비활성 갱신 $500."},
+  {ch:"NAC 634A", q:"The late renewal penalty (within 90 days after Feb 1) is:", ko:"갱신 연체료(2/1 후 90일 내)는?", opts:[["$50","$50"],["$100","$100"],["$200","$200"],["$500","$500"]], answer:1, src:"NAC 634A.165 — 연체료 $100."},
+  {ch:"NAC 634A", q:"The fee to replace a pocket license is:", ko:"포켓 면허증 재발급 수수료는?", opts:[["$50","$50"],["$100","$100"],["$200","$200"],["$700","$700"]], answer:1, src:"NAC 634A.165 — 포켓 면허 재발급 $100."},
+  {ch:"NAC 634A", q:"The fee to replace a (wall) license is:", ko:"(벽걸이) 면허증 재발급 수수료는?", opts:[["$100","$100"],["$200","$200"],["$500","$500"],["$1,000","$1,000"]], answer:1, src:"NAC 634A.165 — 면허증 재발급 $200."},
+  {ch:"NAC 634A", q:"The original state examination fee is:", ko:"주 시험 최초 응시료는?", opts:[["$500","$500"],["$700","$700"],["$1,000","$1,000"],["$2,000","$2,000"]], answer:2, src:"NAC 634A.165 — 주 시험 $1,000."},
+  {ch:"NAC 634A", q:"The reexamination fee is:", ko:"재시험 수수료는?", opts:[["$250","$250"],["$500","$500"],["$700","$700"],["$1,000","$1,000"]], answer:1, src:"NAC 634A.165 — 재시험 $500."},
+  {ch:"NAC 634A", q:"The fee for approval of a continuing education course is:", ko:"보수교육 과정 승인 수수료는?", opts:[["$50","$50"],["$100","$100"],["$200","$200"],["$500","$500"]], answer:1, src:"NAC 634A.165 — 보수교육 과정 승인 $100."},
+  {ch:"NAC 634A", q:"The fee for a returned (NSF) check is:", ko:"부도수표(NSF) 수수료는?", opts:[["$10","$10"],["$25","$25"],["$50","$50"],["$100","$100"]], answer:1, src:"NAC 634A.165 — 부도수표 $25."},
+  {ch:"NAC 634A", q:"The fee for a copy of NRS/NAC chapter 634A is:", ko:"NRS/NAC 634A 사본 수수료는?", opts:[["$5","$5"],["$10","$10"],["$20","$20"],["Free","무료"]], answer:1, src:"NAC 634A.165 — 챕터 사본 $10."},
+  {ch:"NAC 634A", q:"Other copies are charged per page at:", ko:"기타 사본의 페이지당 수수료는?", opts:[["$0.25","$0.25"],["$0.60","$0.60"],["$1.00","$1.00"],["Free","무료"]], answer:0, src:"NAC 634A.165 — 기타 사본 페이지당 $0.25."},
+  {ch:"NAC 634A", q:"The original application fee for an OM school/college is:", ko:"동양의학 학교/대학 최초 신청 수수료는?", opts:[["$500","$500"],["$1,000","$1,000"],["$2,000","$2,000"],["$5,000","$5,000"]], answer:2, src:"NAC 634A.165 — 학교 최초 신청 $2,000."},
+  {ch:"NAC 634A", q:"Annual curriculum approval (before Feb 1) for a school costs:", ko:"학교 연간 교과 승인(2/1 전) 수수료는?", opts:[["$500","$500"],["$1,000","$1,000"],["$2,000","$2,000"],["$700","$700"]], answer:1, src:"NAC 634A.165 — 연간 교과 승인 $1,000."},
+  {ch:"NAC 634A", q:"Under NAC 634A.170, which is unethical/unprofessional conduct?", ko:"NAC 634A.170상 비윤리·비전문 행위는?", opts:[["Fee-splitting for mere referrals","단순 의뢰에 대한 수수료 분배"],["Charging reasonable fees","합리적 요금 청구"],["Keeping records","기록 보관"],["Continuing education","보수교육"]], answer:0, src:"NAC 634A.170 — 단순 의뢰 대가 분배, 무면허자와 보수 공유 등 금지."},
+  {ch:"NAC 634A", q:"Under NAC 634A.170, the use of paid testimonials to solicit services is:", ko:"NAC 634A.170상 유료 추천글로 서비스를 유치하는 것은?", opts:[["Prohibited","금지"],["Encouraged","권장"],["Required","의무"],["Neutral","무관"]], answer:0, src:"NAC 634A.170 — 유료 testimonial 사용 금지."},
+  {ch:"NAC 634A", q:"For false advertising under NAC 634A.170, it is sufficient to show:", ko:"NAC 634A.170상 허위광고 입증에 충분한 것은?", opts:[["A tendency to deceive (no actual deception needed)","기만 가능성(실제 기만 불요)"],["Actual financial loss","실제 금전 손실"],["A criminal conviction","형사 유죄"],["Patient complaint only","환자 불만만"]], answer:0, src:"NAC 634A.170 — 실제 기만 없이 '기만 가능성'만으로 충분."},
+  {ch:"NAC 634A", q:"Under NAC 634A.170, using an unapproved fictitious name is:", ko:"NAC 634A.170상 미승인 가명 사용은?", opts:[["Prohibited","금지"],["Allowed","허용"],["Required","의무"],["Encouraged","권장"]], answer:0, src:"NAC 634A.170 — 미승인 가명(fictitious name) 사용 금지."},
+  {ch:"NAC 634A", q:"Under NAC 634A.220, formal written communications must be addressed to:", ko:"NAC 634A.220상 공식 서면 통신의 수신자는?", opts:[["The State Board (not individuals)","주 위원회(개인 아님)"],["Individual members","개별 위원"],["The Governor","주지사"],["The applicant","신청자"]], answer:0, src:"NAC 634A.220 — 개인이 아닌 'State Board' 앞으로."},
+  {ch:"NAC 634A", q:"Under NAC 634A.230, fees must be made payable to:", ko:"NAC 634A.230상 수수료 지급처는?", opts:[["State Board of Oriental Medicine","State Board of Oriental Medicine"],["Cash to the Director","원장 현금"],["The Governor's office","주지사실"],["NCCAOM","NCCAOM"]], answer:0, src:"NAC 634A.230 — 'State Board of Oriental Medicine' 앞 지급."},
+  {ch:"NAC 634A", q:"Under NAC 634A.230, the application fee is NOT refunded if:", ko:"NAC 634A.230상 신청 수수료가 환불되지 않는 경우는?", opts:[["The application is withdrawn","신청이 철회됨"],["The Board is late","위원회가 지연"],["The exam is canceled by the Board","위원회가 시험 취소"],["A typo is found","오타 발견"]], answer:0, src:"NAC 634A.230 — 6개월 미완료/철회/사망 시 환불 불가."},
+  {ch:"NAC 634A", q:"Under NAC 634A.245, a request for Board action at a meeting must be received at least:", ko:"NAC 634A.245상 회의 안건 요청은 최소 며칠 전 접수되어야 하는가?", opts:[["5 business days before","영업일 5일 전"],["15 business days before","영업일 15일 전"],["30 days before","30일 전"],["1 day before","1일 전"]], answer:1, src:"NAC 634A.245 — 회의 15 영업일 전 접수."},
+  {ch:"NAC 634A", q:"Under NAC 634A.300, an attorney representing a party must be:", ko:"NAC 634A.300상 당사자를 대리하는 변호사는?", opts:[["Admitted and in good standing in some state","어느 주에서 등록·정상 자격"],["A board member","위원"],["A Nevada resident","네바다 거주자"],["Over 50","50세 초과"]], answer:0, src:"NAC 634A.300 — 등록·정상 자격(네바다 미등록 시 네바다 변호사 협력)."},
+  {ch:"NAC 634A", q:"Under NAC 634A.370, the respondent must be notified of a hearing at least:", ko:"NAC 634A.370상 피신청인은 청문 최소 며칠 전 통지받는가?", opts:[["10 days before","10일 전"],["20 days before","20일 전"],["30 days before","30일 전"],["60 days before","60일 전"]], answer:2, src:"NAC 634A.370 — 청문 30일 이상 전 통지(불만 사본 포함)."},
+  {ch:"NAC 634A", q:"Under NAC 634A.380, the respondent must file an answer within:", ko:"NAC 634A.380상 피신청인의 답변 제출 기한은?", opts:[["10 days","10일"],["20 days","20일"],["30 days","30일"],["60 days","60일"]], answer:1, src:"NAC 634A.380 — 통지 후 20일 이내 답변."},
+  {ch:"NAC 634A", q:"Under NAC 634A.380, failure to answer in time may result in:", ko:"NAC 634A.380상 기한 내 미답변 시 결과는?", opts:[["Entry of default","결석판정(default)"],["Automatic dismissal","자동 기각"],["A new hearing","새 청문"],["A refund","환불"]], answer:0, src:"NAC 634A.380 — 미답변 시 default 가능, 불만 내용대로 결정."},
+  {ch:"NAC 634A", q:"Under NAC 634A.390, an opposition to a motion must be filed within:", ko:"NAC 634A.390상 신청(motion)에 대한 반대는 며칠 내 제출하는가?", opts:[["5 days","5일"],["10 days","10일"],["20 days","20일"],["30 days","30일"]], answer:1, src:"NAC 634A.390 — 수령 후 10일 내 반대, 이후 5일 내 재반박."},
+  {ch:"NAC 634A", q:"Under NAC 634A.400, filings require the original plus:", ko:"NAC 634A.400상 제출 시 원본 외 추가 사본 수는?", opts:[["1 copy","1부"],["2 copies","2부"],["5 copies","5부"],["7 copies","7부"]], answer:1, src:"NAC 634A.400 — 원본 + 2부."},
+  {ch:"NAC 634A", q:"Under NAC 634A.440, a continuance request must be received within:", ko:"NAC 634A.440상 기일 연기 요청은 며칠 전 접수되어야 하는가?", opts:[["7 business days before the hearing","청문 영업일 7일 전"],["1 day before","1일 전"],["30 days before","30일 전"],["Anytime","아무 때나"]], answer:0, src:"NAC 634A.440 — 청문 7 영업일 전 접수."},
+  {ch:"NAC 634A", q:"Under NAC 634A.450, a no-show party may apply to reopen within:", ko:"NAC 634A.450상 불출석 당사자의 재개 신청 기한은?", opts:[["15 days","15일"],["30 days","30일"],["60 days","60일"],["90 days","90일"]], answer:0, src:"NAC 634A.450 — 정당사유 시 15일 이내 재개 신청."},
+  {ch:"NAC 634A", q:"Under NAC 634A.470, testimony must generally be:", ko:"NAC 634A.470상 증언은 일반적으로?", opts:[["Given under oath","선서 하에"],["In writing only","서면만"],["Anonymous","익명"],["Optional","임의"]], answer:0, src:"NAC 634A.470 — 공식 인지/합의 외 모든 증언은 선서."},
+  {ch:"NAC 634A", q:"Under NAC 634A.540, a decision must be issued within:", ko:"NAC 634A.540상 결정은 며칠 이내 내려야 하는가?", opts:[["30 days of hearing completion","청문 종료 후 30일"],["60 days","60일"],["90 days of hearing completion","청문 종료 후 90일"],["1 year","1년"]], answer:2, src:"NAC 634A.540 — 청문 종료 후 90일 이내 결정·명령."},
+  {ch:"NAC 634A", q:"Under NAC 634A.560, the Board issues a declaratory order within:", ko:"NAC 634A.560상 위원회는 선언적 명령을 며칠 내 발하는가?", opts:[["30 days of the meeting","회의 후 30일"],["10 days","10일"],["90 days","90일"],["1 year","1년"]], answer:0, src:"NAC 634A.560 — 회의 후 30일 이내 발령(원본+7부 제출)."},
+  {ch:"NAC 634A", q:"Under NAC 634A.071, the application must include:", ko:"NAC 634A.071상 신청서에 포함되어야 하는 것은?", opts:[["SSN, fingerprints, and consent to investigation","SSN·지문·조사 동의"],["A business plan","사업계획서"],["Tax returns","세금신고서"],["A marketing portfolio","마케팅 포트폴리오"]], answer:0, src:"NAC 634A.071 — SSN, 지문(법집행 동의), 신원조사 동의, 자격 증빙."},
+  {ch:"NAC 634A", q:"Under NAC 634A.090, the investigation must include verification from:", ko:"NAC 634A.090상 조사에 포함되는 확인 출처는?", opts:[["An FBI report (no prior convictions)","FBI 보고서(전과 없음)"],["A credit bureau","신용평가사"],["A patient survey","환자 설문"],["A landlord","임대인"]], answer:0, src:"NAC 634A.090 — FBI 보고, 학교 졸업, 타지 면허, 답변 진위 확인."},
+  {ch:"NAC 634A", q:"Under NAC 634A.130, the pocket license must be available for inspection by:", ko:"NAC 634A.130상 포켓 면허 제시 대상은?", opts:[["A patient, Board member, or peace officer","환자·위원·경찰관"],["Only the IRS","국세청만"],["Only other doctors","다른 의사만"],["No one","아무도"]], answer:0, src:"NAC 634A.130 — 환자/예비환자/위원/경관 요청 시 제시."},
 
-  {ch:"NRS 634A", q:"Who appoints the members of the Board?",
-   ko:"위원회 구성원은 누가 임명하는가?",
-   opts:[["The Governor","주지사"],["The Legislature","주 의회"],["The Board itself","위원회 자체"],["The NCCAOM","NCCAOM"]],
-   answer:0, src:"NRS 634A.030 — 주지사(Governor)가 임명."},
+  // ================= NRS 629 (137-176) =================
+  {ch:"NRS 629", q:"Under NRS 629.021, 'health care records' include:", ko:"NRS 629.021상 '의료 기록'에 포함되는 것은?", opts:[["Reports, notes, orders, photographs, X-rays","보고서·메모·지시·사진·엑스레이"],["Only billing statements","청구서만"],["Only prescriptions","처방전만"],["Marketing materials","광고물"]], answer:0, src:"NRS 629.021 — 진료 관련 기록 데이터 일체(형태 불문)."},
+  {ch:"NRS 629", q:"Under NRS 629.031, a doctor of Oriental medicine is:", ko:"NRS 629.031상 한의사는?", opts:[["A 'provider of health care'","'의료 제공자'에 해당"],["Not covered","비해당"],["A medical facility","의료시설"],["An insurer","보험자"]], answer:0, src:"NRS 629.031 — 다수 면허 직역(한의사 포함)이 '의료 제공자'."},
+  {ch:"NRS 629", q:"Under NRS 629.041, a knife or firearm injury apparently not accidental must be reported to:", ko:"NRS 629.041상 사고로 보이지 않는 칼·총상은 누구에게 신고하는가?", opts:[["Law enforcement","법 집행기관"],["The insurer","보험사"],["The family","가족"],["No one","신고 불필요"]], answer:0, src:"NRS 629.041 — 비사고성 칼/총상은 법 집행기관에 신속 신고."},
+  {ch:"NRS 629", q:"Under NRS 629.045, certain severe burns must be reported to the fire department within:", ko:"NRS 629.045상 특정 중증 화상은 소방서에 며칠 이내 신고하는가?", opts:[["24 hours","24시간"],["7 working days","근무일 7일"],["30 days","30일"],["No requirement","요건 없음"]], answer:1, src:"NRS 629.045 — 2/3도 화상 등은 근무일 7일 이내 소방서 신고."},
+  {ch:"NRS 629", q:"Under NRS 629.047, a severely impairing epilepsy condition must be reported to the DMV within:", ko:"NRS 629.047상 운전을 심각히 저해하는 뇌전증은 DMV에 며칠 내 신고하는가?", opts:[["7 days","7일"],["15 days","15일"],["30 days","30일"],["No requirement","요건 없음"]], answer:1, src:"NRS 629.047 — 운전 안전을 심각히 저해 시 15일 내 DMV 신고."},
+  {ch:"NRS 629", q:"Under NRS 629.051, the general record retention period is:", ko:"NRS 629.051상 일반 기록 보관 기간은?", opts:[["1 year","1년"],["3 years","3년"],["5 years","5년"],["10 years","10년"]], answer:2, src:"NRS 629.051 — 최소 5년."},
+  {ch:"NRS 629", q:"Under NRS 629.051, records of persons under what age may not be destroyed?", ko:"NRS 629.051상 몇 세 미만인 사람의 기록은 폐기 불가한가?", opts:[["18","18세"],["21","21세"],["23","23세"],["25","25세"]], answer:2, src:"NRS 629.051 — 23세 미만은 폐기 불가."},
+  {ch:"NRS 629", q:"Under NRS 629.061, an in-state records request must be honored within:", ko:"NRS 629.061상 주 내 기록 요청 처리 기한은?", opts:[["5 working days","근무일 5일"],["10 working days","근무일 10일"],["20 working days","근무일 20일"],["30 days","30일"]], answer:1, src:"NRS 629.061 — 주 내 근무일 10일."},
+  {ch:"NRS 629", q:"Under NRS 629.061, an out-of-state records request must be honored within:", ko:"NRS 629.061상 주 외 기록 요청 처리 기한은?", opts:[["10 working days","근무일 10일"],["20 working days","근무일 20일"],["30 working days","근무일 30일"],["60 days","60일"]], answer:1, src:"NRS 629.061 — 주 외 근무일 20일."},
+  {ch:"NRS 629", q:"Under NRS 629.061, the per-page copy charge may not exceed:", ko:"NRS 629.061상 페이지당 복사비 상한은?", opts:[["30 cents","30센트"],["60 cents","60센트"],["$1.00","$1.00"],["$2.00","$2.00"]], answer:1, src:"NRS 629.061 — 페이지당 60센트, 별도 행정비 불가."},
+  {ch:"NRS 629", q:"Under NRS 629.062, the max fee for electronic records is:", ko:"NRS 629.062상 전자기록 수수료 상한은?", opts:[["$40 or the per-page amount, whichever is less","$40 또는 페이지 요율 중 더 적은 금액"],["$100 flat","정액 $100"],["No limit","제한 없음"],["$5 flat","정액 $5"]], answer:0, src:"NRS 629.062 — $40 또는 페이지 요율 중 적은 금액."},
+  {ch:"NRS 629", q:"Under NRS 629.0625, the charge to complete an employer certification form may not exceed:", ko:"NRS 629.0625상 고용주 증명 양식 작성 비용 상한은?", opts:[["$10","$10"],["$30","$30"],["$60","$60"],["Free","무료"]], answer:1, src:"NRS 629.0625 — 최대 $30(매년 물가 조정)."},
+  {ch:"NRS 629", q:"Under NRS 629.063, when ceasing business, a custodian must deliver records within:", ko:"NRS 629.063상 폐업 시 보관자는 며칠 내 기록을 전달해야 하는가?", opts:[["10 days","10일"],["30 days","30일"],["60 days","60일"],["90 days","90일"]], answer:0, src:"NRS 629.063 — 폐업 시 10일 내 기록 인계."},
+  {ch:"NRS 629", q:"Under NRS 629.069, a provider must disclose contagious disease test results to:", ko:"NRS 629.069상 전염병 검사 결과 공개 대상은?", opts:[["The tested person and certain officials","검사 대상자 및 특정 관계자"],["The general public","일반 대중"],["Insurers only","보험사만"],["No one","비공개"]], answer:0, src:"NRS 629.069 — 검사 대상자·법집행·시설 의무관 등에 공개."},
+  {ch:"NRS 629", q:"Under NRS 629.071, an itemized bill must be furnished:", ko:"NRS 629.071상 항목별 청구서는 어떻게 제공해야 하는가?", opts:[["At no extra cost, with understandable descriptions","추가 비용 없이 이해 가능한 설명으로"],["For a $50 fee","$50 수수료로"],["Only on court order","법원 명령 시에만"],["Never","제공 안 함"]], answer:0, src:"NRS 629.071 — 무료, 이해 가능한 서비스 설명 포함."},
+  {ch:"NRS 629", q:"Under NRS 629.078, purchasing another provider's debt/lien for the same services is:", ko:"NRS 629.078상 동일 진료에 대한 타 제공자의 채권/유치권 매입은?", opts:[["A felony (up to $25,000 fine)","중죄(최대 $25,000 벌금)"],["A misdemeanor","경범죄"],["Allowed","허용"],["Encouraged","권장"]], answer:0, src:"NRS 629.078 — 금지, 위반 시 중죄 + 최대 $25,000 벌금."},
+  {ch:"NRS 629", q:"Under NRS 629.081, observers who do not participate or get paid are:", ko:"NRS 629.081상 참여·보수 없이 관찰만 하는 자는?", opts:[["Immune from negligence liability","과실 책임 면제"],["Fully liable","전적 책임"],["Required to be licensed","면허 필요"],["Banned","출입 금지"]], answer:0, src:"NRS 629.081 — 비참여·무보수 관찰자는 과실책임 면제."},
+  {ch:"NRS 629", q:"Under NRS 629.085, a pelvic exam on an anesthetized patient requires:", ko:"NRS 629.085상 마취 환자에 대한 골반 검사는 무엇을 요구하는가?", opts:[["Informed consent (with narrow exceptions)","사전 동의(제한적 예외)"],["No consent","동의 불요"],["Family vote","가족 투표"],["Court order always","항상 법원명령"]], answer:0, src:"NRS 629.085 — 사전 동의 필요(수술범위·법의학·긴급 의학적 필요 예외)."},
+  {ch:"NRS 629", q:"Under NRS 629.086, who may inject dermal fillers?", ko:"NRS 629.086상 더멀 필러를 주입할 수 있는 자는?", opts:[["Trained physicians, nurses, dentists, or podiatrists","훈련된 의사·간호사·치과의·족부의"],["Anyone","누구나"],["Estheticians","에스테티션"],["Acupuncturists generally","일반 침구사"]], answer:0, src:"NRS 629.086 — 훈련된 의사/간호사/치과의/족부의만(위반 경범죄)."},
+  {ch:"NRS 629", q:"Under NRS 629.093, hours toward CE may include up to 2 hours of:", ko:"NRS 629.093상 보수교육에 최대 2시간 포함 가능한 것은?", opts:[["Alzheimer's or HIV-stigma education","알츠하이머/HIV 낙인 교육"],["Marketing","마케팅"],["Accounting","회계"],["Surgery","수술"]], answer:0, src:"NRS 629.093 — 알츠하이머/HIV 낙인 교육 최대 2시간(윤리요건 제외)."},
+  {ch:"NRS 629", q:"Under NRS 629.151, obtaining genetic information without informed consent is:", ko:"NRS 629.151상 사전 동의 없는 유전정보 취득은?", opts:[["Generally unlawful (narrow exceptions)","원칙적 불법(제한적 예외)"],["Always lawful","항상 합법"],["Required","의무"],["Encouraged","권장"]], answer:0, src:"NRS 629.151 — 사전 동의 없는 취득 불법(법집행 신원·친자·법원명령 등 예외)."},
+  {ch:"NRS 629", q:"Under NRS 629.171, identifying genetic information may NOT be disclosed without consent except for:", ko:"NRS 629.171상 동의 없이 유전정보 공개가 예외적으로 허용되는 경우는?", opts:[["A court order or criminal investigation","법원명령 또는 형사수사"],["Marketing","마케팅"],["Employer curiosity","고용주 호기심"],["Newspaper publication","신문 게재"]], answer:0, src:"NRS 629.171 — 형사/사망 수사, 친자, 법원명령 등 예외에 한해 공개."},
+  {ch:"NRS 629", q:"Under NRS 629.191, a violation of the genetic information provisions is a:", ko:"NRS 629.191상 유전정보 조항 위반은?", opts:[["Misdemeanor","경범죄"],["Felony","중죄"],["Civil-only","민사 한정"],["No penalty","무벌"]], answer:0, src:"NRS 629.191 — 유전정보 위반은 경범죄."},
+  {ch:"NRS 629", q:"Under NRS 629.201, a person injured by genetic-info disclosure may recover:", ko:"NRS 629.201상 유전정보 공개로 피해를 본 자가 청구할 수 있는 것은?", opts:[["Actual damages plus costs and attorney fees","실손해 + 비용 + 변호사비"],["Nothing","없음"],["Only an apology","사과만"],["Triple punitive only","3배 징벌만"]], answer:0, src:"NRS 629.201 — 실손해 + 비용·변호사비 청구 가능."},
+  {ch:"NRS 629", q:"Under NRS 629.250, a licensing board may NOT discipline a provider solely for:", ko:"NRS 629.250상 면허위원회가 단지 그것만으로 징계할 수 없는 것은?", opts:[["Providing lawful reproductive health services","합법적 생식 보건 서비스 제공"],["Committing fraud","사기"],["Gross malpractice","중대 과실"],["Felony convictions","중죄 유죄"]], answer:0, src:"NRS 629.250 — 네바다 기준상 합법인 생식보건 서비스만을 이유로 징계 불가."},
+  {ch:"NRS 629", q:"Under NRS 629.061, in addition to copy fees, a provider may charge:", ko:"NRS 629.061상 복사비 외에 부과할 수 있는 것은?", opts:[["No additional administrative fees","추가 행정비 불가"],["A $100 admin fee","행정비 $100"],["A retrieval fee","검색비"],["A storage fee","보관비"]], answer:0, src:"NRS 629.061 — 별도 행정수수료 부과 불가."},
+  {ch:"NRS 629", q:"Under NRS 629.077, psychiatric care to a foster child requires:", ko:"NRS 629.077상 위탁아동에 대한 정신과 진료는 무엇을 요구하는가?", opts:[["Consent of the legally responsible person","법적 책임자의 동의"],["No consent","동의 불요"],["Court order only","법원명령만"],["Foster parent's verbal OK","위탁부모 구두 동의"]], answer:0, src:"NRS 629.077 — 법적 책임자 동의 + 기록 사본 보관."},
+  {ch:"NRS 629", q:"Under NRS 629.076, advertisements by a provider must:", ko:"NRS 629.076상 제공자의 광고는?", opts:[["Identify the type of license held","보유 면허 종류를 표시"],["Be in newspapers only","신문만 가능"],["Include patient names","환자 이름 포함"],["Omit credentials","자격 생략"]], answer:0, src:"NRS 629.076 — 면허 종류 표시, 명찰 착용(멸균 시술 예외) 등."},
+  {ch:"NRS 629", q:"Under NRS 629.066, if a claim is not submitted to a health plan, a provider may bill the patient:", ko:"NRS 629.066상 보험에 청구하지 않은 경우 제공자가 환자에게 청구할 수 있는 금액은?", opts:[["No more than the plan's terms","보험 약관 한도 이내"],["The full retail price","정가 전액"],["Double the plan rate","약관의 2배"],["Any amount","임의 금액"]], answer:0, src:"NRS 629.066 — 미청구 시 보험 약관 조건 초과 청구 불가."},
+  {ch:"NRS 629", q:"Under NRS 629.075, referring to a physical therapy facility in which the provider has a financial interest requires:", ko:"NRS 629.075상 제공자가 재정적 이해관계가 있는 물리치료시설로 의뢰 시?", opts:[["Conspicuous written disclosure","눈에 띄는 서면 고지"],["No disclosure","고지 불요"],["Verbal note only","구두만"],["Board approval","위원회 승인"]], answer:0, src:"NRS 629.075 — 재정적 이해관계를 서면으로 명확히 고지."},
+  {ch:"NRS 629", q:"Under NRS 629.069, contagious disease results are disclosed primarily to protect:", ko:"NRS 629.069상 전염병 결과 공개의 주된 목적은?", opts:[["Health and safety of exposed persons","노출자의 건강·안전"],["Insurer profits","보험사 이익"],["Marketing","마케팅"],["Research funding","연구비"]], answer:0, src:"NRS 629.069 — 노출 가능자 보호를 위한 결과 통지."},
+  {ch:"NRS 629", q:"Under NRS 629.043, injuries during a declared emergency are reported to:", ko:"NRS 629.043상 비상사태 중 부상은 어디에 보고하는가?", opts:[["The State Disaster Identification Coordination Committee","주 재난식별조정위원회"],["The insurer","보험사"],["The patient's family","환자 가족"],["No one","보고 안 함"]], answer:0, src:"NRS 629.043 — 비상사태/공중보건 비상 시 주 재난식별조정위원회에 보고."},
+  {ch:"NRS 629", q:"Under NRS 629.068, complete records of an inmate must be provided to:", ko:"NRS 629.068상 수감자의 완전한 기록 제공 대상은?", opts:[["The Department of Corrections (on request)","교정국(요청 시)"],["The public","대중"],["The media","언론"],["Other inmates","다른 수감자"]], answer:0, src:"NRS 629.068 — 요청 시 교정국에 완전한 기록 제공."},
+  {ch:"NRS 629", q:"Under NRS 629.065, certain test records may be obtained by law enforcement when:", ko:"NRS 629.065상 법 집행기관이 특정 검사기록을 얻을 수 있는 경우는?", opts:[["A DUI investigation is aided","음주운전 수사에 도움이 될 때"],["For any reason","아무 이유"],["For marketing","마케팅 목적"],["Never","불가"]], answer:0, src:"NRS 629.065 — 음주운전 관련 수사 지원 시 혈액/호흡/소변 검사기록."},
+  {ch:"NRS 629", q:"Under NRS 629.062, an additional fee for a certificate of records is:", ko:"NRS 629.062상 기록 증명서에 대한 추가 수수료는?", opts:[["$5","$5"],["$50","$50"],["$100","$100"],["Free","무료"]], answer:0, src:"NRS 629.062 — 확인서 $5, 증명서 $5, 필름시트 $20 등."},
+  {ch:"NRS 629", q:"Under NRS 629.011, NRS 629 generally concerns:", ko:"NRS 629.011상 NRS 629가 일반적으로 다루는 것은?", opts:[["General provisions for health care and records","의료 및 기록에 관한 일반 규정"],["Acupuncture point location","경혈 위치"],["Herbal pharmacology","본초 약리"],["Tax law","세법"]], answer:0, src:"NRS 629.011 — 의료 제공자·기록 등 일반 규정 체계."},
+  {ch:"NRS 629", q:"Under NRS 629.079, complaints crossing jurisdictions must be referred within:", ko:"NRS 629.079상 관할을 넘는 불만은 며칠 내 이송하는가?", opts:[["5 days (immediately if emergency)","5일(긴급 시 즉시)"],["30 days","30일"],["60 days","60일"],["No requirement","요건 없음"]], answer:0, src:"NRS 629.079 — 5일 내 이송, 즉각적 위협 시 즉시 통지."},
+  {ch:"NRS 629", q:"Under NRS 629.051, electronic creation/maintenance of records is:", ko:"NRS 629.051상 기록의 전자적 생성/유지는?", opts:[["Required as provided by law (NRS 439.589)","법(NRS 439.589)에 따라 요구"],["Prohibited","금지"],["Optional forever","영구 선택"],["Discouraged","권장 안 함"]], answer:0, src:"NRS 629.051 — NRS 439.589에 따른 전자기록 생성·유지."},
 
-  {ch:"NRS 634A", q:"Of the 7 Board members, how many must be licensed doctors of Oriental medicine?",
-   ko:"위원 7명 중 면허를 가진 한의사여야 하는 인원은?",
-   opts:[["Two","2명"],["Three","3명"],["Four","4명"],["All seven","7명 전원"]],
-   answer:2, src:"NRS 634A.040 — 4명은 3년 이상 네바다에서 개업한 면허 한의사."},
+  // ================= NRS 630 (177-200) =================
+  {ch:"NRS 630", q:"NRS Chapter 630 primarily governs the licensing of:", ko:"NRS 제630장이 주로 규율하는 면허 대상은?", opts:[["Physicians (MDs) and physician assistants","의사(MD)·의사보조원"],["Doctors of Oriental medicine","한의사"],["Pharmacists","약사"],["Nurses","간호사"]], answer:0, src:"NRS 630 — 의사·PA·호흡치료사를 규율(동양의학 시험의 참고 일반조항)."},
+  {ch:"NRS 630", q:"Which board administers NRS Chapter 630?", ko:"NRS 제630장을 관할하는 위원회는?", opts:[["State Board of Medical Examiners","주 의료 심사위원회"],["State Board of Oriental Medicine","동양의학 위원회"],["Board of Pharmacy","약무 위원회"],["Board of Nursing","간호 위원회"]], answer:0, src:"NRS 630 — 네바다 주 의료 심사위원회."},
+  {ch:"NRS 630", q:"How many members are on the State Board of Medical Examiners (NRS 630.050)?", ko:"주 의료 심사위원회는 몇 명인가(NRS 630.050)?", opts:[["7","7명"],["9","9명"],["11","11명"],["5","5명"]], answer:2, src:"NRS 630.050 — 주지사 임명 11명."},
+  {ch:"NRS 630", q:"Under NRS 630.050, a member may serve no more than:", ko:"NRS 630.050상 위원의 연임 한도는?", opts:[["Two consecutive full terms","연속 2회 정규임기"],["One term","1회"],["Five terms","5회"],["Unlimited terms","무제한"]], answer:0, src:"NRS 630.050 — 연속 2회 정규임기(4년 공백 후 재임명 가능)."},
+  {ch:"NRS 630", q:"Under NRS 630.060, how many Board members are physicians?", ko:"NRS 630.060상 위원 중 의사는 몇 명인가?", opts:[["3","3명"],["6","6명"],["9","9명"],["11","11명"]], answer:1, src:"NRS 630.060 — 의사 6명 + PA 1 + 호흡치료사 1 + 공중보건 1 + 일반인 2."},
+  {ch:"NRS 630", q:"Under NRS 630.060, the Board includes how many public members?", ko:"NRS 630.060상 위원회의 일반인 위원 수는?", opts:[["1","1명"],["2","2명"],["3","3명"],["0","없음"]], answer:1, src:"NRS 630.060 — 일반인 위원 2명(치유술 면허·시설관리 무관)."},
+  {ch:"NRS 630", q:"Under NRS 630.060, the Board includes a member who is a:", ko:"NRS 630.060상 위원회에 포함되는 직역 위원은?", opts:[["Physician assistant","의사 보조원(PA)"],["Acupuncturist","침구사"],["Pharmacist","약사"],["Optometrist","검안사"]], answer:0, src:"NRS 630.060 — PA 1명, 호흡치료사 1명 포함."},
+  {ch:"NRS 630", q:"Under NRS 630.160, licensure requires graduation from:", ko:"NRS 630.160상 면허에는 어디 졸업이 필요한가?", opts:[["An accredited (or equivalent) medical school","인증된(또는 동등) 의과대학"],["Any college","아무 대학"],["A trade school","직업학교"],["No school","학교 불요"]], answer:0, src:"NRS 630.160 — 인증 의대(또는 동등 외국기관) 졸업 + 시험 합격 + 신원조사."},
+  {ch:"NRS 630", q:"Under NRS 630.020, the 'practice of medicine' includes:", ko:"NRS 630.020상 '의료 행위'에 포함되는 것은?", opts:[["Diagnosing, treating, or preventing conditions (incl. telehealth)","진단·치료·예방(원격의료 포함)"],["Only surgery","수술만"],["Only prescribing","처방만"],["Acupuncture only","침술만"]], answer:0, src:"NRS 630.020 — 진단·치료·예방 등 광범위, 원격의료 포함."},
+  {ch:"NRS 630", q:"Under NRS 630.014, a 'physician' is a person who has:", ko:"NRS 630.014상 '의사'의 정의는?", opts:[["Complied with all chapter requirements to practice medicine","의료 행위를 위한 본 장 요건을 모두 충족한 자"],["Any health degree","아무 보건 학위"],["A business license","사업자 면허"],["Passed a CPR course","CPR 과정 이수"]], answer:0, src:"NRS 630.014 — 본 장의 모든 요건을 충족한 자."},
+  {ch:"NRS 630", q:"Under NRS 630.253, active licensees must complete:", ko:"NRS 630.253상 활성 면허자가 이수해야 하는 것은?", opts:[["Continuing education (per Board regulation)","보수교육(위원회 규정에 따라)"],["Military service","병역"],["A new degree","새 학위"],["Nothing","없음"]], answer:0, src:"NRS 630.253 — 위원회가 정한 보수교육 요건 이수."},
+  {ch:"NRS 630", q:"Under NRS 630.301, which is a ground for disciplinary action?", ko:"NRS 630.301상 징계 사유는?", opts:[["Conviction of a felony","중죄 유죄판결"],["Charging fees","요금 청구"],["Hiring staff","직원 고용"],["Advertising lawfully","합법 광고"]], answer:0, src:"NRS 630.301 — 중죄, 타 관할 징계, 의료과실, 환자와 성적 행위 등."},
+  {ch:"NRS 630", q:"Under NRS 630.301, sexual activity with a patient is:", ko:"NRS 630.301상 환자와의 성적 행위는?", opts:[["A ground for discipline","징계 사유"],["Permitted with consent","동의 시 허용"],["Encouraged","권장"],["Irrelevant","무관"]], answer:0, src:"NRS 630.301 — 환자와의 성적 행위는 징계 사유."},
+  {ch:"NRS 630", q:"Under NRS 630.304, which is prohibited?", ko:"NRS 630.304상 금지되는 것은?", opts:[["False or deceptive advertising","허위·기만 광고"],["Truthful advertising","사실 광고"],["Listing services","서비스 목록"],["Posting hours","진료시간 게시"]], answer:0, src:"NRS 630.304 — 허위광고, 무면허 개업, 백지 처방 서명 등."},
+  {ch:"NRS 630", q:"Under NRS 630.304, signing blank prescription forms is:", ko:"NRS 630.304상 백지 처방전에 서명하는 것은?", opts:[["Prohibited","금지"],["Standard practice","표준 관행"],["Required","의무"],["Encouraged","권장"]], answer:0, src:"NRS 630.304 — 백지 처방전 서명 금지."},
+  {ch:"NRS 630", q:"Under NRS 630.306, which is a ground for discipline?", ko:"NRS 630.306상 징계 사유는?", opts:[["Medical incompetence","의료상 무능력"],["Punctuality","시간 엄수"],["Low overhead","낮은 비용"],["Teaching students","학생 교육"]], answer:0, src:"NRS 630.306 — 무능력, 기만행위, 마약류 위반, 범위 초과 진료 등."},
+  {ch:"NRS 630", q:"Under NRS 630.306, inadequate supervision of a medical assistant is:", ko:"NRS 630.306상 의료보조원에 대한 부적절한 감독은?", opts:[["A ground for discipline","징계 사유"],["Allowed","허용"],["Required","의무"],["Irrelevant","무관"]], answer:0, src:"NRS 630.306 — 의료보조원 감독 부실은 징계 사유."},
+  {ch:"NRS 630", q:"Under NRS 630.400, practicing medicine without a license is:", ko:"NRS 630.400상 무면허 의료 행위는?", opts:[["An unlawful act subject to criminal penalties","형사처벌 대상 위법행위"],["A civil matter only","민사 사안만"],["Permitted","허용"],["A minor issue","사소한 문제"]], answer:0, src:"NRS 630.400 — 무면허 의료/장 위반은 형사처벌 대상 위법행위."},
+  {ch:"NRS 630", q:"A doctor of Oriental medicine, with respect to NRS 630, is:", ko:"한의사는 NRS 630과 관련하여?", opts:[["NOT licensed or regulated under NRS 630","NRS 630의 면허·규제 대상이 아님"],["Licensed under NRS 630","NRS 630으로 면허"],["A physician assistant","의사 보조원"],["Supervised by NRS 630 board","NRS 630 위원회 감독"]], answer:0, src:"NRS 634A.190 — 한의사는 NRS 630의 적용을 받지 않음."},
+  {ch:"NRS 630", q:"Why does the Oriental medicine exam reference NRS 629 and NRS 630?", ko:"동양의학 시험이 NRS 629·630을 참조하는 이유는?", opts:[["They are general health-care provisions listed in the Board's study materials","위원회 학습자료에 포함된 일반 보건 규정이기 때문"],["OM doctors are MDs","한의사가 MD라서"],["They replace 634A","634A를 대체해서"],["They are unrelated","무관해서"]], answer:0, src:"보드 학습자료 — NRS 629·630을 일반 보건 규정으로 참고 포함."},
+  {ch:"NRS 630", q:"Under NRS 630.020, using telehealth/electronic transfer of information is:", ko:"NRS 630.020상 원격의료/전자정보 전송 사용은?", opts:[["Part of the practice of medicine","의료 행위의 일부"],["Banned","금지"],["Outside regulation","규제 밖"],["Acupuncture only","침술만 해당"]], answer:0, src:"NRS 630.020 — 원격의료/전자정보 전송도 의료 행위에 포함."},
+  {ch:"NRS 630", q:"Under NRS 630.060, a public-health representative member must be:", ko:"NRS 630.060상 공중보건 대표 위원은?", opts:[["Not licensed under chapter 630","제630장 면허가 없는 자"],["A licensed surgeon","면허 외과의"],["A pharmacist","약사"],["An acupuncturist","침구사"]], answer:0, src:"NRS 630.060 — 공중보건 대표 1명은 제630장 미면허자."},
+  {ch:"NRS 630", q:"Under NRS 630.060, physician members must have practiced/resided in Nevada for at least:", ko:"NRS 630.060상 의사 위원의 네바다 거주·개업 최소 연수는?", opts:[["1 year","1년"],["3 years","3년"],["5 years","5년"],["10 years","10년"]], answer:2, src:"NRS 630.060 — 5년 이상 네바다 거주·개업."},
+  {ch:"NRS 630", q:"Under NRS 630.301, malpractice may be:", ko:"NRS 630.301상 의료과실은?", opts:[["A ground for disciplinary action","징계 사유"],["Always excused","항상 면책"],["Required","의무"],["A renewal credit","갱신 학점"]], answer:0, src:"NRS 630.301 — 의료과실은 징계 사유."},
 
-  {ch:"NRS 634A", q:"The Board must also include one member who is:",
-   ko:"위원회에는 다음에 해당하는 위원도 반드시 포함된다:",
-   opts:[["A licensed physician (under NRS 630)","NRS 630 면허를 가진 의사"],["A pharmacist","약사"],["A hospital CEO","병원 CEO"],["An insurance agent","보험 대리인"]],
-   answer:0, src:"NRS 634A.040 — NRS 630 면허 의사 1명, 일반인 대표 1명, 학교 대표 1명 포함. (원본 예상문제의 '서양의학 학위는 자격이 아니다'는 오류)"},
-
-  {ch:"NRS 634A", q:"To be licensed, an applicant must pass which examination(s)?",
-   ko:"면허 취득을 위해 응시자가 합격해야 하는 시험은?",
-   opts:[["Only a Nevada written test","네바다 필기시험만"],["Only the NCCAOM national exam","NCCAOM 국가시험만"],["Both the NCCAOM national exam AND a Nevada law/jurisprudence exam","NCCAOM 국가시험과 네바다 법규시험 둘 다"],["A practical exam only","실기시험만"]],
-   answer:2, src:"NRS 634A.120 — NCCAOM 국가시험 + 주 보건·안전 법규시험 둘 다 합격."},
-
-  {ch:"NRS 634A", q:"Which national organization's certification examination is required?",
-   ko:"요구되는 국가 인증 시험을 시행하는 기관은?",
-   opts:[["NCCAOM","NCCAOM"],["AMA","AMA"],["WHO","WHO"],["FDA","FDA"]],
-   answer:0, src:"NRS 634A.120 / NAC 634A.085 — NCCAOM(국가 침구·동양의학 인증위원회)."},
-
-  {ch:"NRS 634A", q:"How often must a license to practice Oriental medicine be renewed?",
-   ko:"한의사 면허는 얼마나 자주 갱신해야 하는가?",
-   opts:[["Every year (annually)","매년"],["Every 2 years","2년마다"],["Every 5 years","5년마다"],["Never","갱신 불필요"]],
-   answer:0, src:"NRS 634A.167 — 매년 갱신."},
-
-  {ch:"NRS 634A", q:"By what date must the annual renewal be completed?",
-   ko:"연간 갱신은 언제까지 완료해야 하는가?",
-   opts:[["On or before February 1","2월 1일 또는 그 이전"],["By December 31","12월 31일까지"],["By the birthday of the licensee","면허자 생일까지"],["By July 1","7월 1일까지"]],
-   answer:0, src:"NRS 634A.167 — 매년 2월 1일까지."},
-
-  {ch:"NRS 634A", q:"The practice of Oriental medicine in Nevada includes:",
-   ko:"네바다에서 동양의학 실습에 포함되는 것은?",
-   opts:[["Acupuncture and herbal medicine","침술과 한약"],["Chiropractic adjustments","카이로프랙틱 교정"],["Prescribing controlled drugs","마약류 처방"],["Surgery","수술"]],
-   answer:0, src:"NRS 634A.010~.020 — 침술·한약 등 동양의학 행위를 규율."},
-
-  // ---------- NAC 634A ----------
-  {ch:"NAC 634A", q:"How many hours of continuing education must a licensee complete each year?",
-   ko:"면허자는 매년 몇 시간의 보수교육(CE)을 이수해야 하는가?",
-   opts:[["5 hours","5시간"],["10 hours","10시간"],["20 hours","20시간"],["None","없음"]],
-   answer:1, src:"NAC 634A.135 — 매년 최소 10시간."},
-
-  {ch:"NAC 634A", q:"What is the maximum CE hours that may be carried forward to the next year?",
-   ko:"다음 해로 이월할 수 있는 최대 보수교육 시간은?",
-   opts:[["0 (no carry-forward)","0 (이월 불가)"],["Up to 10 hours","최대 10시간"],["Up to 20 hours","최대 20시간"],["Unlimited","무제한"]],
-   answer:1, src:"NAC 634A.135 — 초과분 최대 10시간 이월 가능."},
-
-  {ch:"NAC 634A", q:"What is the minimum passing score on the Nevada state examination?",
-   ko:"네바다 주(州) 시험의 최소 합격 점수는?",
-   opts:[["60%","60%"],["70%","70%"],["75%","75%"],["80%","80%"]],
-   answer:1, src:"NAC 634A.100 — 70% 이상."},
-
-  {ch:"NAC 634A", q:"What is the annual renewal fee for an ACTIVE license?",
-   ko:"활성(active) 면허의 연간 갱신 수수료는?",
-   opts:[["$300","$300"],["$500","$500"],["$700","$700"],["$1,000","$1,000"]],
-   answer:2, src:"NAC 634A.165 — 활성 면허 갱신 $700."},
-
-  {ch:"NAC 634A", q:"What is the renewal fee for an INACTIVE license?",
-   ko:"비활성(inactive) 면허의 갱신 수수료는?",
-   opts:[["$500","$500"],["$700","$700"],["$1,000","$1,000"],["$100","$100"]],
-   answer:0, src:"NAC 634A.165 — 비활성 면허 갱신 $500."},
-
-  {ch:"NAC 634A", q:"What is the late penalty for renewing within 90 days after February 1?",
-   ko:"2월 1일 이후 90일 이내 갱신 시 연체료는?",
-   opts:[["$50","$50"],["$100","$100"],["$200","$200"],["$500","$500"]],
-   answer:1, src:"NAC 634A.165 — 연체료 $100 (2월 1일 후 90일 이내)."},
-
-  {ch:"NAC 634A", q:"What is the fee for the original (initial) application?",
-   ko:"최초(신규) 신청 수수료는?",
-   opts:[["$500","$500"],["$700","$700"],["$1,000","$1,000"],["$2,000","$2,000"]],
-   answer:2, src:"NAC 634A.165 — 최초 신청 수수료 $1,000."},
-
-  {ch:"NAC 634A", q:"Licenses issued after December 31, 2018 must:",
-   ko:"2018년 12월 31일 이후 발급된 면허는 무엇을 해야 하는가?",
-   opts:[["Maintain NCCAOM Oriental Medicine certification","NCCAOM 동양의학 인증을 유지"],["Be renewed every 5 years","5년마다 갱신"],["Pay no renewal fee","갱신비 면제"],["Be supervised for 2 years","2년간 감독받음"]],
-   answer:0, src:"NAC 634A.133 — 2018.12.31 이후 면허자는 NCCAOM 인증 유지 필수."},
-
-  {ch:"NAC 634A", q:"Holders of an INACTIVE license are:",
-   ko:"비활성 면허 소지자는 보수교육에 대해:",
-   opts:[["Exempt from CE requirements","보수교육 면제"],["Required to do double CE","2배 이수 필요"],["Required to retake the exam","시험 재응시 필요"],["Required to do 40 hours CE","40시간 이수 필요"]],
-   answer:0, src:"NAC 634A.135 — 비활성 면허는 보수교육 면제."},
-
-  {ch:"NAC 634A", q:"For programs of graduates after Nov 25, 2002, the minimum hours of instruction is:",
-   ko:"2002년 11월 25일 이후 졸업자 프로그램의 최소 교육시간은?",
-   opts:[["1,000 hours","1,000시간"],["2,000 hours","2,000시간"],["3,000 hours","3,000시간"],["5,000 hours","5,000시간"]],
-   answer:2, src:"NAC 634A.080 — 최소 3,000시간(이론 2,500시간 이상 포함)."},
-
-  // ---------- NRS 629 ----------
-  {ch:"NRS 629", q:"How long must a provider retain health care records (general rule)?",
-   ko:"의료 제공자는 일반적으로 의료 기록을 몇 년간 보관해야 하는가?",
-   opts:[["1 year","1년"],["3 years","3년"],["5 years","5년"],["10 years","10년"]],
-   answer:2, src:"NRS 629.051 — 수령/작성 후 5년 보관."},
-
-  {ch:"NRS 629", q:"Records of a person under what age may NOT be destroyed under NRS 629.051?",
-   ko:"NRS 629.051상 몇 세 미만인 사람의 기록은 폐기할 수 없는가?",
-   opts:[["Under 18","18세 미만"],["Under 21","21세 미만"],["Under 23","23세 미만"],["Under 25","25세 미만"]],
-   answer:2, src:"NRS 629.051 — 23세 미만인 사람의 기록은 폐기 불가."},
-
-  {ch:"NRS 629", q:"An in-state request for a patient's records must be fulfilled within:",
-   ko:"주 내(in-state) 환자 기록 요청은 며칠 이내에 처리해야 하는가?",
-   opts:[["5 working days","근무일 5일"],["10 working days","근무일 10일"],["20 working days","근무일 20일"],["30 calendar days","역일 30일"]],
-   answer:1, src:"NRS 629.061 — 주 내 요청은 근무일 10일 이내."},
-
-  {ch:"NRS 629", q:"The per-page copy charge for health care records may not exceed:",
-   ko:"의료 기록 사본의 페이지당 복사 비용은 얼마를 초과할 수 없는가?",
-   opts:[["30 cents","30센트"],["60 cents","60센트"],["$1.00","$1.00"],["$2.00","$2.00"]],
-   answer:1, src:"NRS 629.061 — 페이지당 60센트 초과 불가."},
-
-  {ch:"NRS 629", q:"Obtaining or disclosing a person's genetic information without informed consent is:",
-   ko:"사전 동의 없이 유전 정보를 취득·공개하는 행위는?",
-   opts:[["Unlawful","불법"],["Always permitted","항상 허용"],["Required by law","법적 의무"],["Allowed for research","연구 목적 허용"]],
-   answer:0, src:"NRS 629.151~.171 — 사전 동의 없는 유전정보 취득/공개는 불법(예외 한정)."},
-
-  {ch:"NRS 629", q:"Under NRS 629.031, a doctor of Oriental medicine is:",
-   ko:"NRS 629.031상 한의사는?",
-   opts:[["A 'provider of health care'","'의료 제공자'에 해당"],["Not a health care provider","의료 제공자가 아님"],["A medical facility","의료 시설"],["An insurer","보험자"]],
-   answer:0, src:"NRS 629.031 — 한의사를 포함한 다수 면허 직역이 '의료 제공자'."},
-
-  // ---------- NRS 630 ----------
-  {ch:"NRS 630", q:"NRS Chapter 630 primarily governs the licensing of:",
-   ko:"NRS 제630장이 주로 규율하는 면허 대상은?",
-   opts:[["Physicians (MDs) and physician assistants","의사(MD) 및 의사 보조원"],["Doctors of Oriental medicine","한의사"],["Pharmacists","약사"],["Nurses","간호사"]],
-   answer:0, src:"NRS 630 — 의사·의사보조원·호흡치료사를 규율(동양의학 시험의 '참고 일반조항')."},
-
-  {ch:"NRS 630", q:"Which board administers NRS Chapter 630?",
-   ko:"NRS 제630장을 관할하는 위원회는?",
-   opts:[["State Board of Medical Examiners","주 의료 심사위원회"],["State Board of Oriental Medicine","동양의학 위원회"],["State Board of Pharmacy","주 약무 위원회"],["State Board of Nursing","주 간호 위원회"]],
-   answer:0, src:"NRS 630.050 등 — 네바다 주 의료 심사위원회(Board of Medical Examiners)."},
-
-  {ch:"NRS 630", q:"Why is NRS 630 relevant to the Oriental medicine board?",
-   ko:"NRS 630이 동양의학 위원회와 관련되는 이유는?",
-   opts:[["One OM Board member must be a physician licensed under NRS 630","위원 중 1명은 NRS 630 면허 의사여야 함"],["OM doctors are licensed under NRS 630","한의사는 NRS 630으로 면허받음"],["NRS 630 replaces NRS 634A","NRS 630이 634A를 대체함"],["It is not relevant","관련 없음"]],
-   answer:0, src:"NRS 634A.040 — 동양의학 위원 중 1명은 NRS 630 면허 의사. 보드 학습자료에도 NRS 630이 참고로 포함됨."}
+  // ================= 추가 문제 (201-... → 총 200) =================
+  {ch:"NRS 634A", q:"Under NRS 634A.025, an 'accredited' school must hold at least:", ko:"NRS 634A.025상 '인증' 학교가 보유해야 하는 최소 지위는?", opts:[["Candidacy status from ACAOM (or successor)","ACAOM(또는 후속기관)의 후보(candidacy) 지위"],["A federal charter","연방 인가"],["A state business license only","주 사업자 면허만"],["No accreditation","인증 불요"]], answer:0, src:"NRS 634A.025 — 최소 ACAOM 후보 지위 이상."},
+  {ch:"NRS 634A", q:"Under NRS 634A.142, a point-injection endorsee may inject only:", ko:"NRS 634A.142상 점주사 보증자가 주입할 수 있는 것은?", opts:[["Substances for which trained (nutritional, homeopathic, herbal)","훈련받은 물질(영양·동종요법·약초)"],["Any prescription drug","모든 처방약"],["Controlled narcotics","마약류"],["Liquid silicone","액상 실리콘"]], answer:0, src:"NRS 634A.142 — 훈련받은 영양/동종요법/약초 물질만 주입 가능."},
+  {ch:"NRS 634A", q:"Under NRS 634A.169, the renewal data request to the licensee is:", ko:"NRS 634A.169상 면허자에 대한 갱신 데이터 요청은?", opts:[["Voluntary and confidential (no discipline for non-completion)","임의·기밀(미응답 시 징계 없음)"],["Mandatory","의무"],["Public record","공개기록"],["A licensing exam","면허시험"]], answer:0, src:"NRS 634A.169 — 임의 제출, 기밀, 미완료해도 징계 없음."},
+  {ch:"NRS 634A", q:"Under NRS 634A.115, an application may be denied if the applicant:", ko:"NRS 634A.115상 신청이 거부될 수 있는 경우는?", opts:[["Is not in compliance with a child support order","양육비 명령을 이행하지 않은 경우"],["Is over age 60","60세 초과"],["Lives out of state","주 외 거주"],["Has student debt","학자금 부채"]], answer:0, src:"NRS 634A.115 — 양육비 명령 불이행(승인된 납부계획 없음) 시 거부."},
+  {ch:"NAC 634A", q:"Under NAC 634A.035, program approval requires proof of:", ko:"NAC 634A.035상 프로그램 승인에 필요한 증빙은?", opts:[["Annual accreditation dues paid to ACAOM (or successor)","ACAOM(또는 후속기관)에 연회비 납부 증빙"],["A bank statement","은행 잔고증명"],["A patient list","환자 명단"],["A marketing plan","마케팅 계획"]], answer:0, src:"NAC 634A.035 — ACAOM 연 인증회비 납부 증빙(추가 교과심사 불요)."},
+  {ch:"NAC 634A", q:"Under NAC 634A.125, a temporary certificate application must include:", ko:"NAC 634A.125상 임시 증명서 신청에 포함되어야 하는 것은?", opts:[["A CV, specific topic/dates, and evidence of competence","이력서·구체적 주제/일정·역량 증빙"],["A surgical license","수술 면허"],["A $5,000 deposit","$5,000 예치금"],["A patient referral","환자 의뢰"]], answer:0, src:"NAC 634A.125 — 이력서, 주제, 일정, 역량 증빙 + 수수료, 위원회 승인."},
+  {ch:"NAC 634A", q:"The fee for a temporary certificate for lecturing/teaching is:", ko:"강의/교육용 임시 증명서 수수료는?", opts:[["$50","$50"],["$100","$100"],["$200","$200"],["$1,000","$1,000"]], answer:1, src:"NAC 634A.165 — 강의/교육용 임시 증명서 $100."},
+  {ch:"NAC 634A", q:"Under NAC 634A.240, computation of time generally:", ko:"NAC 634A.240상 기간 계산은 일반적으로?", opts:[["Excludes the first day, includes the last","초일 불산입, 말일 산입"],["Includes both days","양일 모두 산입"],["Excludes both days","양일 모두 불산입"],["Counts weekends only","주말만 계산"]], answer:0, src:"NAC 634A.240 — 초일 불산입·말일 산입(말일이 주말/공휴일이면 익영업일)."},
+  {ch:"NAC 634A", q:"Under NAC 634A.430, a previously continued hearing is reset on notice of at least:", ko:"NAC 634A.430상 연기된 청문의 재지정은 최소 며칠 전 통지하는가?", opts:[["3 days","3일"],["10 days","10일"],["30 days","30일"],["No notice","통지 없음"]], answer:1, src:"NAC 634A.430 — 10일 이상 통지로 재지정."},
+  {ch:"NRS 629", q:"Under NRS 629.062, the additional fee for radiologic images may be up to:", ko:"NRS 629.062상 방사선 영상에 대한 추가 수수료 상한은?", opts:[["$5","$5"],["$25","$25"],["$100","$100"],["Free","무료"]], answer:1, src:"NRS 629.062 — 방사선 영상 $25, 필름시트 $20 등."},
+  {ch:"NRS 630", q:"Under NRS 630.060, the Board includes a member who is a:", ko:"NRS 630.060상 위원회에 포함되는 또 다른 직역 위원은?", opts:[["Respiratory care practitioner","호흡 치료사"],["Veterinarian","수의사"],["Acupuncturist","침구사"],["Optician","안경사"]], answer:0, src:"NRS 630.060 — 호흡치료사 1명 포함."}
 ];
 </script>
 
@@ -276,8 +337,15 @@ let order = [];        // 셔플된 인덱스
 let pos = 0;           // 현재 위치
 let solved = 0;        // 맞춘 개수
 let locked = false;    // 정답 맞춘 뒤 잠금
+let cur = null;        // 현재 표시 중인(보기 섞인) 문제
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+/* 보기(선택지) 순서를 무작위로 섞어 정답 위치 편향 제거 */
+function shuffledView(Q){
+  const idx = shuffle([0,1,2,3]);
+  return { opts: idx.map(i=>Q.opts[i]), answer: idx.indexOf(Q.answer) };
+}
 
 function startQuiz(){
   order = shuffle([...Array(QUESTIONS.length).keys()]);
@@ -308,12 +376,13 @@ function renderQuiz(){
   locked = false;
   const qi = order[pos];
   const Q = QUESTIONS[qi];
+  cur = shuffledView(Q);
   area.innerHTML = `
     <div class="card">
       <div class="qmeta"><span class="chip">${Q.ch}</span><span class="chip">문제 ${pos+1}</span></div>
       <div class="qtext">${Q.q}<span class="ko">${Q.ko}</span></div>
       <ul class="opts" id="opts">
-        ${Q.opts.map((o,i)=>`
+        ${cur.opts.map((o,i)=>`
           <li class="opt" data-i="${i}" onclick="pick(${i})">
             <span class="lab">${LAB[i]}</span>
             <span>${o[0]}<span class="ko">${o[1]}</span></span>
@@ -333,7 +402,7 @@ function pick(i){
   const opts = document.querySelectorAll("#opts .opt");
   const fb = document.getElementById("fb");
 
-  if(i === Q.answer){
+  if(i === cur.answer){
     locked = true; solved++;
     opts.forEach(o=>o.classList.add("disabled"));
     opts[i].classList.add("correct");
@@ -358,15 +427,17 @@ function next(){
 /* ===================== 전체 보기 ===================== */
 function renderAll(){
   const v = document.getElementById("view-all");
-  v.innerHTML = QUESTIONS.map((Q,n)=>`
+  v.innerHTML = QUESTIONS.map((Q,n)=>{
+    const view = shuffledView(Q);
+    return `
     <div class="allitem">
       <div class="qmeta"><span class="chip">${Q.ch}</span><span class="chip">#${n+1}</span></div>
       <div class="qtext">${Q.q}<span class="ko">${Q.ko}</span></div>
       <ol type="A">
-        ${Q.opts.map((o,i)=>`<li class="${i===Q.answer?'ans':''}">${o[0]} / ${o[1]}${i===Q.answer?' ✓':''}</li>`).join("")}
+        ${view.opts.map((o,i)=>`<li class="${i===view.answer?'ans':''}">${o[0]} / ${o[1]}${i===view.answer?' ✓':''}</li>`).join("")}
       </ol>
-      <div class="ansline">정답(Answer): <b>${LAB[Q.answer]}</b> · ${Q.src}</div>
-    </div>`).join("");
+      <div class="ansline">정답(Answer): <b>${LAB[view.answer]}</b> · ${Q.src}</div>
+    </div>`;}).join("");
 }
 
 /* ===================== 탭 ===================== */
