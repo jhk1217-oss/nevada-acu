@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>네바다 한의사 법률시험 예상문제 | Nevada Oriental Medicine Law Exam Prep</title>
+<style>
+  :root{
+    --bg:#0f1720; --card:#16212e; --card2:#1d2c3d; --line:#2a3a4d;
+    --ink:#e9eef4; --muted:#9fb0c2; --accent:#3da9fc; --accent2:#2b6cb0;
+    --good:#37c871; --good-bg:#123a26; --bad:#ef5365; --bad-bg:#3a1620;
+    --chip:#23344a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+    background:linear-gradient(180deg,#0c131c,#0f1720 240px);color:var(--ink);
+    line-height:1.55;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:24px 18px 80px}
+  header h1{font-size:1.5rem;margin:0 0 4px}
+  header p{color:var(--muted);margin:0;font-size:.9rem}
+  .disclaimer{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:10px;padding:12px 14px;margin:16px 0;font-size:.82rem;color:var(--muted)}
+  .tabs{display:flex;gap:8px;margin:18px 0}
+  .tab{flex:1;text-align:center;padding:12px 10px;background:var(--card);border:1px solid var(--line);
+    border-radius:12px;cursor:pointer;font-weight:600;color:var(--muted);transition:.15s;user-select:none}
+  .tab.active{background:var(--accent);color:#04121f;border-color:var(--accent)}
+  .hidden{display:none!important}
+
+  /* quiz */
+  .progress{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:.85rem;color:var(--muted)}
+  .bar{flex:1;height:8px;background:var(--card2);border-radius:99px;overflow:hidden}
+  .bar > i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:.3s}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
+  .qmeta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .chip{font-size:.72rem;background:var(--chip);color:var(--accent);padding:3px 10px;border-radius:99px;font-weight:600}
+  .qtext{font-size:1.08rem;font-weight:600;margin:4px 0 2px}
+  .qtext .ko{display:block;color:var(--muted);font-weight:500;font-size:.96rem;margin-top:4px}
+  .opts{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:10px}
+  .opt{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--card2);
+    border:1.5px solid var(--line);border-radius:12px;cursor:pointer;transition:.12s}
+  .opt:hover{border-color:var(--accent2)}
+  .opt .lab{font-weight:700;color:var(--accent);min-width:18px}
+  .opt.correct{background:var(--good-bg);border-color:var(--good)}
+  .opt.wrong{background:var(--bad-bg);border-color:var(--bad)}
+  .opt.disabled{cursor:default;opacity:.85}
+  .opt .ko{display:block;color:var(--muted);font-size:.9rem;margin-top:2px}
+  .feedback{margin-top:14px;padding:12px 14px;border-radius:12px;font-size:.9rem;display:none}
+  .feedback.show{display:block}
+  .feedback.ok{background:var(--good-bg);border:1px solid var(--good)}
+  .feedback.no{background:var(--bad-bg);border:1px solid var(--bad)}
+  .feedback .src{display:block;margin-top:6px;color:var(--muted);font-size:.82rem}
+  .row{display:flex;gap:10px;margin-top:16px}
+  button.btn{flex:1;padding:13px;border:none;border-radius:12px;font-size:1rem;font-weight:700;cursor:pointer}
+  .btn.primary{background:var(--accent);color:#04121f}
+  .btn.primary:disabled{background:var(--card2);color:#5b6b7c;cursor:not-allowed}
+  .btn.ghost{background:var(--card2);color:var(--ink);border:1px solid var(--line);flex:0 0 auto;padding:13px 18px}
+  .done{text-align:center;padding:40px 20px}
+  .done .big{font-size:3rem}
+
+  /* all view */
+  .allitem{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px}
+  .allitem .qtext{font-size:1rem}
+  .allitem ol{margin:10px 0 0;padding-left:20px}
+  .allitem li{margin:4px 0}
+  .allitem li.ans{color:var(--good);font-weight:600}
+  .ansline{margin-top:10px;font-size:.86rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+  .ansline b{color:var(--good)}
+  footer{color:var(--muted);font-size:.78rem;text-align:center;margin-top:30px}
+  a{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>네바다 한의사 법률시험 예상문제</h1>
+    <p>Nevada Oriental Medicine Law (Jurisprudence) Exam Prep · NRS 634A / NAC 634A / NRS 629 / NRS 630</p>
+  </header>
+
+  <div class="disclaimer">
+    ⚠️ <b>학습용 예상문제입니다.</b> 실제 시험 출제와 다를 수 있으며, 응시 전 반드시 원문
+    <a href="https://www.leg.state.nv.us/nrs/nrs-634a.html" target="_blank">NRS 634A</a> ·
+    <a href="https://www.leg.state.nv.us/nac/nac-634a.html" target="_blank">NAC 634A</a> ·
+    <a href="https://www.leg.state.nv.us/nrs/nrs-629.html" target="_blank">NRS 629</a> ·
+    <a href="https://www.leg.state.nv.us/nrs/nrs-630.html" target="_blank">NRS 630</a>
+    및 <a href="https://orientalmedicine.nv.gov/Licensing/examStudyMaterials/" target="_blank">보드 공식 학습자료</a>를 확인하세요.
+    For study only — verify against the official statutes before the exam.
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" id="tab-quiz" onclick="showTab('quiz')">🎲 퀴즈 모드 (Quiz)</div>
+    <div class="tab" id="tab-all" onclick="showTab('all')">📋 전체 문제 보기 (All)</div>
+  </div>
+
+  <!-- QUIZ MODE -->
+  <section id="view-quiz">
+    <div class="progress">
+      <span id="pcount">0 / 0</span>
+      <div class="bar"><i id="pbar"></i></div>
+      <span id="pscore">정답 0</span>
+    </div>
+    <div id="quizArea"></div>
+  </section>
+
+  <!-- ALL MODE -->
+  <section id="view-all" class="hidden"></section>
+
+  <footer>
+    네바다 한의사 법률시험 대비 · 자료 출처: leg.state.nv.us, orientalmedicine.nv.gov
+  </footer>
+</div>
+
+<script>
+/* ===========================================================
+   문제 은행 — 실제 NRS 634A / NAC 634A / NRS 629 / NRS 630 근거
+   answer: 정답 인덱스(0=A,1=B,2=C,3=D)
+   =========================================================== */
+const QUESTIONS = [
+  // ---------- NRS 634A ----------
+  {ch:"NRS 634A", q:"Which board licenses and regulates doctors of Oriental medicine in Nevada?",
+   ko:"네바다에서 한의사(동양의학 의사)를 면허·규제하는 위원회는?",
+   opts:[["State Board of Oriental Medicine","동양의학 위원회"],["State Board of Medical Examiners","주 의료 심사위원회"],["State Board of Health","주 보건 위원회"],["Board of Chiropractic","카이로프랙틱 위원회"]],
+   answer:0, src:"NRS 634A.030 — 동양의학 위원회(State Board of Oriental Medicine) 설치."},
+
+  {ch:"NRS 634A", q:"How many members constitute the State Board of Oriental Medicine?",
+   ko:"동양의학 위원회는 몇 명으로 구성되는가?",
+   opts:[["Five","5명"],["Seven","7명"],["Nine","9명"],["Eleven","11명"]],
+   answer:1, src:"NRS 634A.030 — 주지사가 임명하는 7명."},
+
+  {ch:"NRS 634A", q:"Who appoints the members of the Board?",
+   ko:"위원회 구성원은 누가 임명하는가?",
+   opts:[["The Governor","주지사"],["The Legislature","주 의회"],["The Board itself","위원회 자체"],["The NCCAOM","NCCAOM"]],
+   answer:0, src:"NRS 634A.030 — 주지사(Governor)가 임명."},
+
+  {ch:"NRS 634A", q:"Of the 7 Board members, how many must be licensed doctors of Oriental medicine?",
+   ko:"위원 7명 중 면허를 가진 한의사여야 하는 인원은?",
+   opts:[["Two","2명"],["Three","3명"],["Four","4명"],["All seven","7명 전원"]],
+   answer:2, src:"NRS 634A.040 — 4명은 3년 이상 네바다에서 개업한 면허 한의사."},
+
+  {ch:"NRS 634A", q:"The Board must also include one member who is:",
+   ko:"위원회에는 다음에 해당하는 위원도 반드시 포함된다:",
+   opts:[["A licensed physician (under NRS 630)","NRS 630 면허를 가진 의사"],["A pharmacist","약사"],["A hospital CEO","병원 CEO"],["An insurance agent","보험 대리인"]],
+   answer:0, src:"NRS 634A.040 — NRS 630 면허 의사 1명, 일반인 대표 1명, 학교 대표 1명 포함. (원본 예상문제의 '서양의학 학위는 자격이 아니다'는 오류)"},
+
+  {ch:"NRS 634A", q:"To be licensed, an applicant must pass which examination(s)?",
+   ko:"면허 취득을 위해 응시자가 합격해야 하는 시험은?",
+   opts:[["Only a Nevada written test","네바다 필기시험만"],["Only the NCCAOM national exam","NCCAOM 국가시험만"],["Both the NCCAOM national exam AND a Nevada law/jurisprudence exam","NCCAOM 국가시험과 네바다 법규시험 둘 다"],["A practical exam only","실기시험만"]],
+   answer:2, src:"NRS 634A.120 — NCCAOM 국가시험 + 주 보건·안전 법규시험 둘 다 합격."},
+
+  {ch:"NRS 634A", q:"Which national organization's certification examination is required?",
+   ko:"요구되는 국가 인증 시험을 시행하는 기관은?",
+   opts:[["NCCAOM","NCCAOM"],["AMA","AMA"],["WHO","WHO"],["FDA","FDA"]],
+   answer:0, src:"NRS 634A.120 / NAC 634A.085 — NCCAOM(국가 침구·동양의학 인증위원회)."},
+
+  {ch:"NRS 634A", q:"How often must a license to practice Oriental medicine be renewed?",
+   ko:"한의사 면허는 얼마나 자주 갱신해야 하는가?",
+   opts:[["Every year (annually)","매년"],["Every 2 years","2년마다"],["Every 5 years","5년마다"],["Never","갱신 불필요"]],
+   answer:0, src:"NRS 634A.167 — 매년 갱신."},
+
+  {ch:"NRS 634A", q:"By what date must the annual renewal be completed?",
+   ko:"연간 갱신은 언제까지 완료해야 하는가?",
+   opts:[["On or before February 1","2월 1일 또는 그 이전"],["By December 31","12월 31일까지"],["By the birthday of the licensee","면허자 생일까지"],["By July 1","7월 1일까지"]],
+   answer:0, src:"NRS 634A.167 — 매년 2월 1일까지."},
+
+  {ch:"NRS 634A", q:"The practice of Oriental medicine in Nevada includes:",
+   ko:"네바다에서 동양의학 실습에 포함되는 것은?",
+   opts:[["Acupuncture and herbal medicine","침술과 한약"],["Chiropractic adjustments","카이로프랙틱 교정"],["Prescribing controlled drugs","마약류 처방"],["Surgery","수술"]],
+   answer:0, src:"NRS 634A.010~.020 — 침술·한약 등 동양의학 행위를 규율."},
+
+  // ---------- NAC 634A ----------
+  {ch:"NAC 634A", q:"How many hours of continuing education must a licensee complete each year?",
+   ko:"면허자는 매년 몇 시간의 보수교육(CE)을 이수해야 하는가?",
+   opts:[["5 hours","5시간"],["10 hours","10시간"],["20 hours","20시간"],["None","없음"]],
+   answer:1, src:"NAC 634A.135 — 매년 최소 10시간."},
+
+  {ch:"NAC 634A", q:"What is the maximum CE hours that may be carried forward to the next year?",
+   ko:"다음 해로 이월할 수 있는 최대 보수교육 시간은?",
+   opts:[["0 (no carry-forward)","0 (이월 불가)"],["Up to 10 hours","최대 10시간"],["Up to 20 hours","최대 20시간"],["Unlimited","무제한"]],
+   answer:1, src:"NAC 634A.135 — 초과분 최대 10시간 이월 가능."},
+
+  {ch:"NAC 634A", q:"What is the minimum passing score on the Nevada state examination?",
+   ko:"네바다 주(州) 시험의 최소 합격 점수는?",
+   opts:[["60%","60%"],["70%","70%"],["75%","75%"],["80%","80%"]],
+   answer:1, src:"NAC 634A.100 — 70% 이상."},
+
+  {ch:"NAC 634A", q:"What is the annual renewal fee for an ACTIVE license?",
+   ko:"활성(active) 면허의 연간 갱신 수수료는?",
+   opts:[["$300","$300"],["$500","$500"],["$700","$700"],["$1,000","$1,000"]],
+   answer:2, src:"NAC 634A.165 — 활성 면허 갱신 $700."},
+
+  {ch:"NAC 634A", q:"What is the renewal fee for an INACTIVE license?",
+   ko:"비활성(inactive) 면허의 갱신 수수료는?",
+   opts:[["$500","$500"],["$700","$700"],["$1,000","$1,000"],["$100","$100"]],
+   answer:0, src:"NAC 634A.165 — 비활성 면허 갱신 $500."},
+
+  {ch:"NAC 634A", q:"What is the late penalty for renewing within 90 days after February 1?",
+   ko:"2월 1일 이후 90일 이내 갱신 시 연체료는?",
+   opts:[["$50","$50"],["$100","$100"],["$200","$200"],["$500","$500"]],
+   answer:1, src:"NAC 634A.165 — 연체료 $100 (2월 1일 후 90일 이내)."},
+
+  {ch:"NAC 634A", q:"What is the fee for the original (initial) application?",
+   ko:"최초(신규) 신청 수수료는?",
+   opts:[["$500","$500"],["$700","$700"],["$1,000","$1,000"],["$2,000","$2,000"]],
+   answer:2, src:"NAC 634A.165 — 최초 신청 수수료 $1,000."},
+
+  {ch:"NAC 634A", q:"Licenses issued after December 31, 2018 must:",
+   ko:"2018년 12월 31일 이후 발급된 면허는 무엇을 해야 하는가?",
+   opts:[["Maintain NCCAOM Oriental Medicine certification","NCCAOM 동양의학 인증을 유지"],["Be renewed every 5 years","5년마다 갱신"],["Pay no renewal fee","갱신비 면제"],["Be supervised for 2 years","2년간 감독받음"]],
+   answer:0, src:"NAC 634A.133 — 2018.12.31 이후 면허자는 NCCAOM 인증 유지 필수."},
+
+  {ch:"NAC 634A", q:"Holders of an INACTIVE license are:",
+   ko:"비활성 면허 소지자는 보수교육에 대해:",
+   opts:[["Exempt from CE requirements","보수교육 면제"],["Required to do double CE","2배 이수 필요"],["Required to retake the exam","시험 재응시 필요"],["Required to do 40 hours CE","40시간 이수 필요"]],
+   answer:0, src:"NAC 634A.135 — 비활성 면허는 보수교육 면제."},
+
+  {ch:"NAC 634A", q:"For programs of graduates after Nov 25, 2002, the minimum hours of instruction is:",
+   ko:"2002년 11월 25일 이후 졸업자 프로그램의 최소 교육시간은?",
+   opts:[["1,000 hours","1,000시간"],["2,000 hours","2,000시간"],["3,000 hours","3,000시간"],["5,000 hours","5,000시간"]],
+   answer:2, src:"NAC 634A.080 — 최소 3,000시간(이론 2,500시간 이상 포함)."},
+
+  // ---------- NRS 629 ----------
+  {ch:"NRS 629", q:"How long must a provider retain health care records (general rule)?",
+   ko:"의료 제공자는 일반적으로 의료 기록을 몇 년간 보관해야 하는가?",
+   opts:[["1 year","1년"],["3 years","3년"],["5 years","5년"],["10 years","10년"]],
+   answer:2, src:"NRS 629.051 — 수령/작성 후 5년 보관."},
+
+  {ch:"NRS 629", q:"Records of a person under what age may NOT be destroyed under NRS 629.051?",
+   ko:"NRS 629.051상 몇 세 미만인 사람의 기록은 폐기할 수 없는가?",
+   opts:[["Under 18","18세 미만"],["Under 21","21세 미만"],["Under 23","23세 미만"],["Under 25","25세 미만"]],
+   answer:2, src:"NRS 629.051 — 23세 미만인 사람의 기록은 폐기 불가."},
+
+  {ch:"NRS 629", q:"An in-state request for a patient's records must be fulfilled within:",
+   ko:"주 내(in-state) 환자 기록 요청은 며칠 이내에 처리해야 하는가?",
+   opts:[["5 working days","근무일 5일"],["10 working days","근무일 10일"],["20 working days","근무일 20일"],["30 calendar days","역일 30일"]],
+   answer:1, src:"NRS 629.061 — 주 내 요청은 근무일 10일 이내."},
+
+  {ch:"NRS 629", q:"The per-page copy charge for health care records may not exceed:",
+   ko:"의료 기록 사본의 페이지당 복사 비용은 얼마를 초과할 수 없는가?",
+   opts:[["30 cents","30센트"],["60 cents","60센트"],["$1.00","$1.00"],["$2.00","$2.00"]],
+   answer:1, src:"NRS 629.061 — 페이지당 60센트 초과 불가."},
+
+  {ch:"NRS 629", q:"Obtaining or disclosing a person's genetic information without informed consent is:",
+   ko:"사전 동의 없이 유전 정보를 취득·공개하는 행위는?",
+   opts:[["Unlawful","불법"],["Always permitted","항상 허용"],["Required by law","법적 의무"],["Allowed for research","연구 목적 허용"]],
+   answer:0, src:"NRS 629.151~.171 — 사전 동의 없는 유전정보 취득/공개는 불법(예외 한정)."},
+
+  {ch:"NRS 629", q:"Under NRS 629.031, a doctor of Oriental medicine is:",
+   ko:"NRS 629.031상 한의사는?",
+   opts:[["A 'provider of health care'","'의료 제공자'에 해당"],["Not a health care provider","의료 제공자가 아님"],["A medical facility","의료 시설"],["An insurer","보험자"]],
+   answer:0, src:"NRS 629.031 — 한의사를 포함한 다수 면허 직역이 '의료 제공자'."},
+
+  // ---------- NRS 630 ----------
+  {ch:"NRS 630", q:"NRS Chapter 630 primarily governs the licensing of:",
+   ko:"NRS 제630장이 주로 규율하는 면허 대상은?",
+   opts:[["Physicians (MDs) and physician assistants","의사(MD) 및 의사 보조원"],["Doctors of Oriental medicine","한의사"],["Pharmacists","약사"],["Nurses","간호사"]],
+   answer:0, src:"NRS 630 — 의사·의사보조원·호흡치료사를 규율(동양의학 시험의 '참고 일반조항')."},
+
+  {ch:"NRS 630", q:"Which board administers NRS Chapter 630?",
+   ko:"NRS 제630장을 관할하는 위원회는?",
+   opts:[["State Board of Medical Examiners","주 의료 심사위원회"],["State Board of Oriental Medicine","동양의학 위원회"],["State Board of Pharmacy","주 약무 위원회"],["State Board of Nursing","주 간호 위원회"]],
+   answer:0, src:"NRS 630.050 등 — 네바다 주 의료 심사위원회(Board of Medical Examiners)."},
+
+  {ch:"NRS 630", q:"Why is NRS 630 relevant to the Oriental medicine board?",
+   ko:"NRS 630이 동양의학 위원회와 관련되는 이유는?",
+   opts:[["One OM Board member must be a physician licensed under NRS 630","위원 중 1명은 NRS 630 면허 의사여야 함"],["OM doctors are licensed under NRS 630","한의사는 NRS 630으로 면허받음"],["NRS 630 replaces NRS 634A","NRS 630이 634A를 대체함"],["It is not relevant","관련 없음"]],
+   answer:0, src:"NRS 634A.040 — 동양의학 위원 중 1명은 NRS 630 면허 의사. 보드 학습자료에도 NRS 630이 참고로 포함됨."}
+];
+</script>
+
+<script>
+/* ===================== 앱 로직 ===================== */
+const LAB = ["A","B","C","D"];
+let order = [];        // 셔플된 인덱스
+let pos = 0;           // 현재 위치
+let solved = 0;        // 맞춘 개수
+let locked = false;    // 정답 맞춘 뒤 잠금
+
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+
+function startQuiz(){
+  order = shuffle([...Array(QUESTIONS.length).keys()]);
+  pos = 0; solved = 0;
+  renderQuiz();
+}
+
+function renderQuiz(){
+  const total = QUESTIONS.length;
+  document.getElementById("pcount").textContent = (pos) + " / " + total;
+  document.getElementById("pscore").textContent = "정답 " + solved;
+  document.getElementById("pbar").style.width = (pos/total*100) + "%";
+
+  const area = document.getElementById("quizArea");
+
+  if(pos >= total){
+    area.innerHTML = `<div class="card done">
+       <div class="big">🎉</div>
+       <h2>전체 ${total}문제 완료!</h2>
+       <p style="color:var(--muted)">모든 문제를 맞히고 끝까지 통과했습니다.</p>
+       <div class="row"><button class="btn primary" onclick="startQuiz()">🔄 다시 풀기 (랜덤)</button></div>
+    </div>`;
+    document.getElementById("pcount").textContent = total + " / " + total;
+    document.getElementById("pbar").style.width = "100%";
+    return;
+  }
+
+  locked = false;
+  const qi = order[pos];
+  const Q = QUESTIONS[qi];
+  area.innerHTML = `
+    <div class="card">
+      <div class="qmeta"><span class="chip">${Q.ch}</span><span class="chip">문제 ${pos+1}</span></div>
+      <div class="qtext">${Q.q}<span class="ko">${Q.ko}</span></div>
+      <ul class="opts" id="opts">
+        ${Q.opts.map((o,i)=>`
+          <li class="opt" data-i="${i}" onclick="pick(${i})">
+            <span class="lab">${LAB[i]}</span>
+            <span>${o[0]}<span class="ko">${o[1]}</span></span>
+          </li>`).join("")}
+      </ul>
+      <div class="feedback" id="fb"></div>
+      <div class="row">
+        <button class="btn primary" id="nextBtn" disabled onclick="next()">다음 문제 →</button>
+      </div>
+    </div>`;
+}
+
+function pick(i){
+  if(locked) return;
+  const qi = order[pos];
+  const Q = QUESTIONS[qi];
+  const opts = document.querySelectorAll("#opts .opt");
+  const fb = document.getElementById("fb");
+
+  if(i === Q.answer){
+    locked = true; solved++;
+    opts.forEach(o=>o.classList.add("disabled"));
+    opts[i].classList.add("correct");
+    fb.className = "feedback ok show";
+    fb.innerHTML = `✅ 정답입니다! <span class="src">${Q.src}</span>`;
+    document.getElementById("nextBtn").disabled = false;
+    document.getElementById("pscore").textContent = "정답 " + solved;
+  } else {
+    // 오답: 표시하되 정답을 맞혀야 다음으로 진행
+    opts[i].classList.add("wrong");
+    fb.className = "feedback no show";
+    fb.innerHTML = `❌ 오답입니다. 정답을 골라야 다음 문제로 넘어갈 수 있습니다. <span class="src">Try again — pick the correct answer to proceed.</span>`;
+  }
+}
+
+function next(){
+  if(!locked) return;
+  pos++;
+  renderQuiz();
+}
+
+/* ===================== 전체 보기 ===================== */
+function renderAll(){
+  const v = document.getElementById("view-all");
+  v.innerHTML = QUESTIONS.map((Q,n)=>`
+    <div class="allitem">
+      <div class="qmeta"><span class="chip">${Q.ch}</span><span class="chip">#${n+1}</span></div>
+      <div class="qtext">${Q.q}<span class="ko">${Q.ko}</span></div>
+      <ol type="A">
+        ${Q.opts.map((o,i)=>`<li class="${i===Q.answer?'ans':''}">${o[0]} / ${o[1]}${i===Q.answer?' ✓':''}</li>`).join("")}
+      </ol>
+      <div class="ansline">정답(Answer): <b>${LAB[Q.answer]}</b> · ${Q.src}</div>
+    </div>`).join("");
+}
+
+/* ===================== 탭 ===================== */
+function showTab(which){
+  document.getElementById("tab-quiz").classList.toggle("active", which==="quiz");
+  document.getElementById("tab-all").classList.toggle("active", which==="all");
+  document.getElementById("view-quiz").classList.toggle("hidden", which!=="quiz");
+  document.getElementById("view-all").classList.toggle("hidden", which!=="all");
+}
+
+/* init */
+renderAll();
+startQuiz();
+</script>
+</body>
+</html>
